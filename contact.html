@@ -1,117 +1,597 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Brainwave Matrix Technologies – Web, Mobile &amp; EdTech NZ</title>
+  <meta name="description" content="Get in touch with Brainwave Matrix Technologies. Contact us for web development, mobile app development, or coding academy enrollment in New Zealand." />
+  <meta name="keywords" content="contact Brainwave Matrix Technologies, web development NZ, mobile app NZ, coding academy NZ, get a quote NZ tech company" />
+  <meta name="author" content="Brainwave Matrix Technologies" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://brainwavematrixtech.com/contact.html" />
+  <meta name="geo.region" content="NZ" />
+  <meta name="geo.placename" content="New Zealand" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brainwavematrixtech.com/contact.html" />
+  <meta property="og:title" content="Contact Brainwave Matrix Technologies | Web, Mobile &amp; EdTech NZ" />
+  <meta property="og:description" content="Get in touch with Brainwave Matrix Technologies. Contact us for web development, mobile app development, or coding academy enrollment in New Zealand." />
+  <meta property="og:locale" content="en_NZ" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Brainwave Matrix Technologies | Web, Mobile &amp; EdTech NZ" />
+  <meta name="twitter:description" content="Get in touch with BMT for web development, mobile apps, or coding academy enrollment in New Zealand." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Brainwave Matrix Technologies",
+    "url": "https://brainwavematrixtech.com/contact.html",
+    "description": "Contact Brainwave Matrix Technologies for web development, mobile app development, or coding academy enrollment in New Zealand.",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Brainwave Matrix Technologies",
+      "url": "https://brainwavematrixtech.com",
+      "telephone": "+64-21-086-29929",
+      "email": "Brainwavematrixtech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NZ"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+64-21-086-29929",
+        "email": "Brainwavematrixtech@gmail.com",
+        "contactType": "customer service",
+        "areaServed": ["NZ", "Worldwide"],
+        "availableLanguage": "English"
+      }]
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="bmt_logo.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
+  </script>
+  <style>
+    :root { --accent: #00ff88; --blue: #00b4d8; --bg: #060f24; }
+    body { background-color: var(--bg); color: #e2e8f0; font-family: 'Inter', sans-serif; }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Brainwave Matrix Tech">
-<meta name="description" content="Brainwave Matrix Tech develops kids math learning and educational apps in Auckland, New Zealand and India.">
-<meta name="keywords" content="kids math apps, educational apps for children, Brainwave Matrix Tech, math learning apps, app developers Auckland, app developers India">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="app.css">
-<script src="script.js" defer></script>
+    /* Contact info cards */
+    .contact-card { border-radius: 20px; padding: 32px 28px; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.025); backdrop-filter: blur(14px); transition: all 0.4s; text-align: center; position: relative; overflow: hidden; }
+    .contact-card::before { content:''; position:absolute; inset:0; opacity:0; transition:opacity 0.4s; }
+    .contact-card.green::before { background: radial-gradient(circle at top, rgba(0,255,136,0.07), transparent 70%); }
+    .contact-card.blue::before { background: radial-gradient(circle at top, rgba(0,180,216,0.07), transparent 70%); }
+    .contact-card.yellow::before { background: radial-gradient(circle at top, rgba(251,191,36,0.07), transparent 70%); }
+    .contact-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
+    .contact-card:hover::before { opacity:1; }
+    .contact-card.green:hover { border-color: rgba(0,255,136,0.25); }
+    .contact-card.blue:hover { border-color: rgba(0,180,216,0.25); }
+    .contact-card.yellow:hover { border-color: rgba(251,191,36,0.25); }
+    .contact-card-icon { width: 64px; height: 64px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin: 0 auto 18px; }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brainwave Matrix Tech</title>
+    /* Enquiry type tiles */
+    .enquiry-tile { border-radius: 20px; padding: 28px 20px; border: 2px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.025); backdrop-filter: blur(12px); transition: all 0.35s; cursor: pointer; text-align: center; position: relative; overflow: hidden; user-select: none; }
+    .enquiry-tile:hover { border-color: rgba(0,255,136,0.25); background: rgba(0,255,136,0.04); transform: translateY(-3px); }
+    .enquiry-tile.active { border-color: #00ff88 !important; background: rgba(0,255,136,0.08) !important; box-shadow: 0 0 24px rgba(0,255,136,0.15), inset 0 0 20px rgba(0,255,136,0.04); }
+    .enquiry-tile.active .enquiry-title { color: #00ff88; }
+    .enquiry-tile .check { position: absolute; top: 12px; right: 12px; width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg, #00ff88, #00b4d8); display: flex; align-items: center; justify-content: center; font-size: 10px; color: #060f24; font-weight: 900; opacity: 0; transform: scale(0); transition: all 0.3s; }
+    .enquiry-tile.active .check { opacity:1; transform:scale(1); }
+    .enquiry-emoji { font-size: 36px; margin-bottom: 12px; display: block; }
+    .enquiry-title { font-weight: 700; font-size: 15px; color: #e2e8f0; transition: color 0.3s; margin-bottom: 4px; }
+    .enquiry-sub { font-size: 12px; color: #64748b; }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="bmt_logo.ico">
+    /* Online links panel */
+    .online-link { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.02); transition: all 0.3s; text-decoration: none; }
+    .online-link:hover { border-color: rgba(0,255,136,0.2); background: rgba(0,255,136,0.04); transform: translateX(4px); }
+    .online-link-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
 
-    <!-- Meta tags -->
-    <meta name="description" content="Brainwave Matrix Tech builds educational apps for kids, focusing on math skills, puzzles, and interactive learning experiences.">
-    <meta name="keywords" content="kids math apps, arithmetic learning app, educational apps for kids, Brainwave Matrix Tech">
-    <meta name="author" content="Brainwave Matrix Tech">
-    <meta name="robots" content="index, follow">
+    /* Response time strip */
+    .response-strip { border-radius: 20px; padding: 24px 32px; background: linear-gradient(135deg, rgba(0,255,136,0.06), rgba(0,180,216,0.04)); border: 1px solid rgba(0,255,136,0.12); }
 
-<title>Contact Us - Brainwave Matrix Tech</title>
+    /* Pulsing dot */
+    @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.2)} }
 
+    /* Animated gradient text */
+    @keyframes gradient-shift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    .gradient-text-animated { background: linear-gradient(135deg, #00ff88, #00b4d8, #a855f7, #00ff88); background-size: 300% 300%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradient-shift 4s ease infinite; }
+
+    /* Particle */
+    .particle { position: absolute; border-radius: 50%; pointer-events: none; animation: float-particle linear infinite; opacity: 0.3; }
+    @keyframes float-particle { 0%{transform:translateY(0) rotate(0deg);opacity:0.3} 50%{opacity:0.12} 100%{transform:translateY(-100vh) rotate(360deg);opacity:0} }
+
+    /* Success */
+    #contact-success { display: none; }
+    #contact-success.show { display: flex; }
+
+    /* Pulsing ring */
+    @keyframes pulse-ring { 0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(0,255,136,0.3)} 70%{transform:scale(1);box-shadow:0 0 0 16px rgba(0,255,136,0)} 100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(0,255,136,0)} }
+  </style>
 </head>
-<body>
+<body class="antialiased">
 
-<header class="site-header">
-    <div class="header-left">
-        <img src="bmt_logo.ico" alt="Brainwave Matrix Tech Icon" class="logo-img">
-
-        <div class="brand-text">
-            <div class="brand-name">Brainwave Matrix Tech</div>
-            <div class="brand-tagline">
-                Brainpower Meets Technology, Achieving Anything
-            </div>
+<!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50" role="navigation" aria-label="Main navigation">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="Brainwave Matrix Technologies Home">
+        <img src="bmt_logo.ico" alt="BMT Logo" class="w-12 h-12 object-contain rounded-xl shadow-lg group-hover:scale-105 transition-transform" />
+        <div class="hidden sm:block">
+          <span class="text-white font-bold text-lg leading-none">Brainwave Matrix Tech</span>
+          <span class="block text-[10px] text-green-400 font-semibold tracking-widest">Brainpower Meets Technology, Achieving Anything</span>
         </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="index.html#about" class="nav-link text-gray-300 text-sm font-medium">About</a>
+        <a href="web-development.html" class="nav-link text-gray-300 text-sm font-medium">Web Dev</a>
+        <a href="mobile-apps.html" class="nav-link text-gray-300 text-sm font-medium">Mobile Apps</a>
+        <a href="coding-academy.html" class="nav-link text-gray-300 text-sm font-medium">Academy</a>
+        <a href="portfolio.html" class="nav-link text-gray-300 text-sm font-medium">Portfolio</a>
+        <a href="contact.html" class="nav-link text-gray-300 text-sm font-medium">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="coding-academy.html" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full glow-btn">
+          <i class="fas fa-graduation-cap text-xs"></i> Enroll Now
+        </a>
+        <button id="mobile-toggle" class="lg:hidden text-gray-300 hover:text-white transition-colors p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden glass rounded-2xl mb-4 overflow-hidden">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <div class="flex items-center gap-3 pb-3 border-b border-white/10">
+          <img src="bmt_logo.ico" alt="BMT Logo" class="w-10 h-10 object-contain rounded-lg" />
+          <span class="text-white font-bold text-sm">Brainwave Matrix Tech</span>
+        </div>
+        <a href="index.html#about" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">About</a>
+        <a href="web-development.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Web Dev</a>
+        <a href="mobile-apps.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Mobile Apps</a>
+        <a href="coding-academy.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Academy</a>
+        <a href="portfolio.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Portfolio</a>
+        <a href="contact.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Contact</a>
+        <a href="coding-academy.html" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-semibold px-5 py-3 rounded-full glow-btn mt-2" onclick="closeMobileMenu()">
+          <i class="fas fa-graduation-cap text-xs"></i> Enroll Now
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+<section class="pt-20 relative overflow-hidden hero-bg" aria-label="Contact Hero">
+  <!-- Particles -->
+  <div class="absolute inset-0 pointer-events-none" id="particles-contact" aria-hidden="true"></div>
+  <div class="dot-grid absolute inset-0 opacity-25" aria-hidden="true"></div>
+
+  <!-- Glow orbs -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+    <div class="absolute w-96 h-96 rounded-full opacity-10" style="background:radial-gradient(circle,#00ff88,transparent);top:-10%;left:-5%;filter:blur(60px)"></div>
+    <div class="absolute w-80 h-80 rounded-full opacity-8" style="background:radial-gradient(circle,#00b4d8,transparent);bottom:0;right:5%;filter:blur(50px)"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="min-height:40vh;">
+    <div class="flex flex-col items-center justify-center text-center py-20">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="mb-6">
+        <ol class="flex items-center justify-center gap-2 text-sm text-gray-500">
+          <li><a href="index.html" class="hover:text-green-400 transition-colors">Home</a></li>
+          <li><i class="fas fa-chevron-right text-xs text-gray-600"></i></li>
+          <li class="text-green-400 font-medium">Contact</li>
+        </ol>
+      </nav>
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 section-badge mb-6 reveal">
+        <span class="w-2 h-2 rounded-full bg-green-400" style="animation:pulse-dot 1.5s ease infinite"></span>
+        <span>Get in Touch</span>
+      </div>
+
+      <!-- H1 -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 reveal reveal-delay-1">
+        Let's Build Something<br />
+        <span class="gradient-text-animated">Together</span>
+      </h1>
+
+      <!-- Subtext -->
+      <p class="text-gray-400 text-lg leading-relaxed max-w-2xl reveal reveal-delay-2">
+        Whether you need a website, a mobile app, or want to enrol your child in our coding academy — we'd love to hear from you. We respond within 24 hours.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ CONTACT CARDS ═══════════════════════════════════ -->
+<section class="py-16 relative" aria-labelledby="contact-cards-heading">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 id="contact-cards-heading" class="sr-only">Contact Information</h2>
+    <div class="grid sm:grid-cols-3 gap-6">
+
+      <!-- Email -->
+      <a href="mailto:Brainwavematrixtech@gmail.com" class="contact-card blue reveal" aria-label="Email Brainwave Matrix Technologies">
+        <div class="contact-card-icon" style="background:linear-gradient(135deg,rgba(0,180,216,0.2),rgba(0,180,216,0.08))">
+          <i class="fas fa-envelope" style="color:#00b4d8"></i>
+        </div>
+        <div class="text-white font-bold text-base mb-1">Email Us</div>
+        <div class="text-gray-400 text-sm break-all">Brainwavematrixtech@gmail.com</div>
+        <div class="mt-4 inline-flex items-center gap-1 text-xs font-semibold" style="color:#00b4d8">
+          Send email <i class="fas fa-arrow-right text-xs ml-1"></i>
+        </div>
+      </a>
+
+      <!-- Phone -->
+      <a href="tel:+64210862 9929" class="contact-card green reveal reveal-delay-1" aria-label="Call Brainwave Matrix Technologies">
+        <div class="contact-card-icon" style="background:linear-gradient(135deg,rgba(0,255,136,0.2),rgba(0,255,136,0.08))">
+          <i class="fas fa-phone" style="color:#00ff88"></i>
+        </div>
+        <div class="text-white font-bold text-base mb-1">Call Us</div>
+        <div class="text-gray-400 text-sm">+64 21 086 29929</div>
+        <div class="mt-4 inline-flex items-center gap-1 text-xs font-semibold" style="color:#00ff88">
+          Make a call <i class="fas fa-arrow-right text-xs ml-1"></i>
+        </div>
+      </a>
+
+      <!-- Location -->
+      <div class="contact-card yellow reveal reveal-delay-2" aria-label="BMT Location">
+        <div class="contact-card-icon" style="background:linear-gradient(135deg,rgba(251,191,36,0.2),rgba(251,191,36,0.08))">
+          <i class="fas fa-map-marker-alt" style="color:#fbbf24"></i>
+        </div>
+        <div class="text-white font-bold text-base mb-1">Location</div>
+        <div class="text-gray-400 text-sm">New Zealand</div>
+        <div class="text-gray-500 text-xs mt-1">Serving clients worldwide</div>
+        <div class="mt-4 inline-flex items-center gap-1 text-xs font-semibold" style="color:#fbbf24">
+          <i class="fas fa-globe text-xs mr-1"></i> Global reach
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+<!-- ═══════════════════════════════════ ENQUIRY TYPE + FORM ═══════════════════════════════════ -->
+<section class="py-20 relative" aria-labelledby="enquiry-heading">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section header -->
+    <div class="text-center mb-12 reveal">
+      <div class="inline-flex items-center gap-2 section-badge mb-4">
+        <i class="fas fa-pen-to-square text-xs"></i>
+        <span>Send an Enquiry</span>
+      </div>
+      <h2 id="enquiry-heading" class="text-3xl sm:text-4xl font-black text-white mb-4">
+        What Can We Help<br /><span class="gradient-text">You With?</span>
+      </h2>
+      <p class="text-gray-400 max-w-xl mx-auto text-base">Select your enquiry type below so we can route your message to the right team member.</p>
     </div>
 
-    <button class="menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    <!-- Enquiry type tiles -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 reveal" role="group" aria-label="Enquiry type selector">
+      <div class="enquiry-tile" id="tile-webdev" onclick="selectEnquiry('webdev', 'Web Development Project')" role="button" tabindex="0" aria-pressed="false" onkeydown="if(event.key==='Enter'||event.key===' ')selectEnquiry('webdev','Web Development Project')">
+        <div class="check"><i class="fas fa-check"></i></div>
+        <span class="enquiry-emoji">💻</span>
+        <div class="enquiry-title">Web Development</div>
+        <div class="enquiry-sub">New site or redesign</div>
+      </div>
+      <div class="enquiry-tile" id="tile-mobile" onclick="selectEnquiry('mobile', 'Mobile App Development')" role="button" tabindex="0" aria-pressed="false" onkeydown="if(event.key==='Enter'||event.key===' ')selectEnquiry('mobile','Mobile App Development')">
+        <div class="check"><i class="fas fa-check"></i></div>
+        <span class="enquiry-emoji">📱</span>
+        <div class="enquiry-title">Mobile App</div>
+        <div class="enquiry-sub">Android &amp; iOS apps</div>
+      </div>
+      <div class="enquiry-tile" id="tile-academy" onclick="selectEnquiry('academy', 'Academy Enrollment')" role="button" tabindex="0" aria-pressed="false" onkeydown="if(event.key==='Enter'||event.key===' ')selectEnquiry('academy','Academy Enrollment')">
+        <div class="check"><i class="fas fa-check"></i></div>
+        <span class="enquiry-emoji">🎓</span>
+        <div class="enquiry-title">Academy Enrollment</div>
+        <div class="enquiry-sub">Coding for kids</div>
+      </div>
+      <div class="enquiry-tile" id="tile-general" onclick="selectEnquiry('general', 'General Enquiry')" role="button" tabindex="0" aria-pressed="false" onkeydown="if(event.key==='Enter'||event.key===' ')selectEnquiry('general','General Enquiry')">
+        <div class="check"><i class="fas fa-check"></i></div>
+        <span class="enquiry-emoji">💬</span>
+        <div class="enquiry-title">General Enquiry</div>
+        <div class="enquiry-sub">Something else</div>
+      </div>
+    </div>
 
-    <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="arithmetic.html">Arithmetic</a>
-        <a href="arithmeticpuzzle.html">Arithmetic Puzzle</a>
-        <a href="numberninjas.html">Number Ninjas</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-	
-</header>
+    <!-- Contact Form -->
+    <div class="glass-strong rounded-2xl p-8 md:p-10 reveal reveal-delay-1">
 
-<div class="main-content">
-<h1>Contact Us</h1>
-<p>We would love to hear from you! Reach out for support, feedback, or collaboration.</p>
+      <!-- Success state -->
+      <div id="contact-success" class="flex-col items-center justify-center text-center py-12 gap-4">
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6 shadow-2xl" style="animation:pulse-ring 2s ease infinite">
+          <i class="fas fa-check text-4xl text-white"></i>
+        </div>
+        <h3 class="text-white text-2xl font-black mb-3">Thank You!</h3>
+        <p class="text-gray-400 text-base max-w-md mx-auto leading-relaxed">Your message has been sent successfully. A member of our team will get back to you within 24 hours on business days.</p>
+        <a href="index.html" class="inline-flex items-center gap-2 mt-6 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold px-8 py-3 rounded-full glow-btn">
+          <i class="fas fa-home text-sm"></i> Back to Home
+        </a>
+      </div>
 
-<div class="contact-box">
-<h2>Email Us Directly</h2>
-<a href="mailto:brainwavematrixtech@gmail.com">✉️ brainwavematrixtech@gmail.com</a>
-</div>
+      <!-- Form -->
+      <form id="contact-main-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="f1d67150-9872-4241-91ad-c6682e923535" />
+        <input type="hidden" name="subject" value="BMT Website Contact Enquiry" />
+        <input type="hidden" name="from_name" value="BMT Website" />
+        <input type="hidden" id="service-input" name="service" value="Not specified" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" aria-hidden="true" />
 
-<div class="contact-box">
-<h2>Follow Us</h2>
-<p>Stay updated with our latest apps and news.</p>
-<a href="https://play.google.com/store/apps/developer?id=Brainwave+Matrix+Tech" target="_blank">📱 Google Play Developer Page</a>
-</div>
+        <!-- Selected enquiry display -->
+        <div id="selected-enquiry-display" class="mb-6 hidden">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold" style="background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.25);color:#00ff88">
+            <i class="fas fa-check-circle"></i>
+            <span id="selected-enquiry-text">Enquiry type selected</span>
+          </div>
+        </div>
 
-<footer>
-<p>&copy; 2026 Brainwave Matrix Tech. All rights reserved.</p>
+        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label for="ct-name" class="block text-gray-300 text-sm font-semibold mb-2">Full Name <span class="text-green-400">*</span></label>
+            <input type="text" id="ct-name" name="name" required placeholder="Your full name" class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none" autocomplete="name" />
+          </div>
+          <div>
+            <label for="ct-email" class="block text-gray-300 text-sm font-semibold mb-2">Email Address <span class="text-green-400">*</span></label>
+            <input type="email" id="ct-email" name="email" required placeholder="you@example.com" class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none" autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label for="ct-phone" class="block text-gray-300 text-sm font-semibold mb-2">Phone <span class="text-gray-500 font-normal">(optional)</span></label>
+            <input type="tel" id="ct-phone" name="phone" placeholder="+64 21 XXX XXXX" class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none" autocomplete="tel" />
+          </div>
+          <div>
+            <label for="ct-company" class="block text-gray-300 text-sm font-semibold mb-2">Company / Organisation <span class="text-gray-500 font-normal">(optional)</span></label>
+            <input type="text" id="ct-company" name="company" placeholder="Your company name" class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none" autocomplete="organization" />
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <label for="ct-budget" class="block text-gray-300 text-sm font-semibold mb-2">Budget Range <span class="text-gray-500 font-normal">(optional)</span></label>
+          <select id="ct-budget" name="budget" class="form-input w-full px-4 py-3 rounded-xl text-sm focus:outline-none" style="color:#94a3b8;-webkit-appearance:none">
+            <option value="" style="color:#475569;background:#0f172a">Select a budget range (optional)</option>
+            <option value="Under $1,000" style="background:#0f172a">Under $1,000</option>
+            <option value="$1,000 – $3,000" style="background:#0f172a">$1,000 – $3,000</option>
+            <option value="$3,000 – $10,000" style="background:#0f172a">$3,000 – $10,000</option>
+            <option value="$10,000+" style="background:#0f172a">$10,000+</option>
+            <option value="Not sure yet" style="background:#0f172a">Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="mb-7">
+          <label for="ct-message" class="block text-gray-300 text-sm font-semibold mb-2">Message <span class="text-green-400">*</span></label>
+          <textarea id="ct-message" name="message" required rows="6" placeholder="Tell us how we can help — describe your project, your goals, your timeline, or anything else you'd like us to know..." class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none resize-none"></textarea>
+        </div>
+
+        <button type="submit" id="ct-submit-btn" class="w-full inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-4 rounded-xl glow-btn text-base transition-all hover:scale-[1.02]">
+          <i class="fas fa-paper-plane" id="ct-btn-icon"></i>
+          <span id="ct-btn-text">Send Message</span>
+        </button>
+
+        <p class="text-gray-600 text-xs text-center mt-4"><i class="fas fa-shield-alt mr-1 text-green-500"></i>Your information is kept private and never shared with third parties.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+<!-- ═══════════════════════════════════ FIND US ONLINE ═══════════════════════════════════ -->
+<section class="py-16 relative" aria-labelledby="find-us-heading">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10 reveal">
+      <div class="inline-flex items-center gap-2 section-badge mb-4">
+        <i class="fas fa-globe text-xs"></i>
+        <span>Find Us Online</span>
+      </div>
+      <h2 id="find-us-heading" class="text-2xl sm:text-3xl font-black text-white mb-3">
+        Explore Our <span class="gradient-text">Digital Presence</span>
+      </h2>
+      <p class="text-gray-400 text-sm">Check out our apps, academy, and stay connected with BMT across the web.</p>
+    </div>
+
+    <div class="space-y-4 reveal">
+
+      <a href="https://play.google.com/store/apps/dev?id=7331833012510602202" target="_blank" rel="noopener noreferrer" class="online-link" aria-label="View BMT on Google Play Store">
+        <div class="online-link-icon" style="background:linear-gradient(135deg,rgba(0,180,216,0.15),rgba(0,255,136,0.15))">
+          <i class="fab fa-google-play" style="color:#00b4d8;font-size:20px"></i>
+        </div>
+        <div class="flex-1">
+          <div class="text-white font-semibold text-sm">Google Play Developer Page</div>
+          <div class="text-gray-500 text-xs mt-0.5">Explore all BMT apps — Arithmetic, Number Ninjas, Arithmetic Puzzle &amp; more</div>
+        </div>
+        <i class="fas fa-arrow-right text-gray-600 text-sm group-hover:text-green-400"></i>
+      </a>
+
+      <a href="https://sthirabrainacademy.com/" target="_blank" rel="noopener noreferrer" class="online-link" aria-label="Visit Sthira Brain Academy">
+        <div class="online-link-icon" style="background:linear-gradient(135deg,rgba(168,85,247,0.15),rgba(139,92,246,0.15))">
+          <span style="font-size:20px">🧠</span>
+        </div>
+        <div class="flex-1">
+          <div class="text-white font-semibold text-sm">Sthira Brain Academy</div>
+          <div class="text-gray-500 text-xs mt-0.5">Our flagship EdTech platform for brain training and learning</div>
+        </div>
+        <i class="fas fa-arrow-right text-gray-600 text-sm"></i>
+      </a>
+
+      <a href="mailto:Brainwavematrixtech@gmail.com" class="online-link" aria-label="Email Brainwave Matrix Technologies directly">
+        <div class="online-link-icon" style="background:linear-gradient(135deg,rgba(251,191,36,0.15),rgba(245,158,11,0.15))">
+          <i class="fas fa-envelope" style="color:#fbbf24;font-size:18px"></i>
+        </div>
+        <div class="flex-1">
+          <div class="text-white font-semibold text-sm">Email Directly</div>
+          <div class="text-gray-500 text-xs mt-0.5">Brainwavematrixtech@gmail.com</div>
+        </div>
+        <i class="fas fa-arrow-right text-gray-600 text-sm"></i>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ RESPONSE TIME STRIP ═══════════════════════════════════ -->
+<section class="pb-20" aria-label="Response time information">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="response-strip reveal">
+      <div class="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-2xl flex-shrink-0 shadow-lg">
+          ⚡
+        </div>
+        <div>
+          <div class="text-white font-bold text-lg mb-1">Quick Response Guaranteed</div>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            We typically respond within <strong class="text-green-400">24 hours</strong> on business days. For urgent enquiries, email us directly at
+            <a href="mailto:Brainwavematrixtech@gmail.com" class="text-green-400 hover:underline font-medium">Brainwavematrixtech@gmail.com</a>
+            or call us at
+            <a href="tel:+64210862 9929" class="text-blue-400 hover:underline font-medium">+64 21 086 29929</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+<footer class="footer-bg pt-16 pb-8" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div class="sm:col-span-2 lg:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="bmt_logo.ico" alt="BMT Logo" class="w-12 h-12 object-contain rounded-xl shadow-lg" />
+          <div>
+            <span class="text-white font-bold text-base leading-none">Brainwave Matrix Tech</span>
+            <span class="block text-[10px] text-green-400 font-semibold tracking-wide">Brainpower Meets Technology</span>
+          </div>
+        </div>
+        <p class="text-gray-500 text-sm leading-relaxed mb-4">New Zealand-based technology company delivering premium web, mobile, and EdTech solutions.</p>
+        <div class="flex items-center gap-2 text-xs text-gray-600"><i class="fas fa-map-marker-alt text-green-500"></i> New Zealand &bull; Global Reach</div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm">Services</h4>
+        <ul class="space-y-2.5">
+          <li><a href="web-development.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Web Design &amp; Development</a></li>
+          <li><a href="mobile-apps.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Mobile App Development</a></li>
+          <li><a href="coding-academy.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Coding for Kids</a></li>
+          <li><a href="web-development.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">SEO Optimisation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm">Our Products</h4>
+        <ul class="space-y-2.5">
+          <li><a href="https://play.google.com/store/apps/details?id=com.bmt.arithmetic" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#10133; Arithmetic</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.bmt.numberninjas" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129399; Number Ninjas</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.bmt.arithmeticpuzzle" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129513; Arithmetic Puzzle</a></li>
+          <li><a href="https://sthirabrainacademy.com/" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129504; Sthira Brain Academy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm">Contact</h4>
+        <ul class="space-y-2.5">
+          <li><a href="mailto:Brainwavematrixtech@gmail.com" class="text-gray-500 hover:text-green-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-envelope text-xs"></i> Brainwavematrixtech@gmail.com</a></li>
+          <li><a href="tel:+6421086 29929" class="text-gray-500 hover:text-green-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-phone text-xs"></i> +64 21 086 29929</a></li>
+          <li class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-map-marker-alt text-xs"></i> New Zealand</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-divider mb-8"></div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
+      <p>&copy; <span id="year"></span> Brainwave Matrix Tech. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hover:text-green-400 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-green-400 transition-colors">Terms of Service</a>
+      </div>
+      <p class="flex items-center gap-1.5"><i class="fas fa-heart text-green-500 text-xs"></i> Building EdTech for kids in New Zealand and India</p>
+    </div>
+  </div>
 </footer>
-</div>
+
+<!-- Back to top -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg glow-btn flex items-center justify-center opacity-0 translate-y-4" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Toast notification -->
+<div id="toast" role="alert" aria-live="polite"></div>
+
+<!-- ═══════════════════════════════════ SCRIPTS ═══════════════════════════════════ -->
 <script>
-    const header = document.querySelector('.site-header');
-    const toggleBtn = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.main-nav');
-    const links = document.querySelectorAll('.main-nav a');
-
-    // Toggle mobile menu
-    toggleBtn.addEventListener('click', () => {
-        toggleBtn.classList.toggle('active');
-        nav.classList.toggle('active');
+  // Enquiry type selector
+  let selectedEnquiry = '';
+  function selectEnquiry(id, label) {
+    // Deactivate all
+    document.querySelectorAll('.enquiry-tile').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-pressed', 'false');
     });
+    // Activate selected
+    const tile = document.getElementById('tile-' + id);
+    tile.classList.add('active');
+    tile.setAttribute('aria-pressed', 'true');
+    // Set hidden input
+    document.getElementById('service-input').value = label;
+    selectedEnquiry = label;
+    // Show display tag
+    const display = document.getElementById('selected-enquiry-display');
+    document.getElementById('selected-enquiry-text').textContent = label + ' selected';
+    display.classList.remove('hidden');
+  }
 
-    // Auto-close on link click (mobile)
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-            toggleBtn.classList.remove('active');
-        });
-    });
+  // Web3Forms submission
+  document.getElementById('contact-main-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('ct-submit-btn');
+    const btnText = document.getElementById('ct-btn-text');
+    const btnIcon = document.getElementById('ct-btn-icon');
+    btn.disabled = true;
+    btnText.textContent = 'Sending...';
+    btnIcon.className = 'fas fa-spinner fa-spin';
 
-    // Active menu highlight
-    const currentPage = location.pathname.split('/').pop() || 'index.html';
-    links.forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
-            link.classList.add('active');
-        }
-    });
+    try {
+      const formData = new FormData(this);
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+      const data = await res.json();
+      if (data.success) {
+        this.style.display = 'none';
+        document.getElementById('selected-enquiry-display').style.display = 'none';
+        document.getElementById('contact-success').classList.add('show');
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      btnText.textContent = 'Send Message';
+      btnIcon.className = 'fas fa-paper-plane';
+      btn.disabled = false;
+      showToast('Something went wrong. Please try again or email us directly.', 'error');
+    }
+  });
 
-    // Header shadow on scroll
-    window.addEventListener('scroll', () => {
-        header.classList.toggle('scrolled', window.scrollY > 10);
-    });
+  // Toast utility
+  function showToast(msg, type = 'success') {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.className = 'show ' + (type === 'error' ? 'error' : '');
+    setTimeout(() => { toast.className = toast.className.replace('show', ''); }, 4000);
+  }
+
+  // Particles
+  (function () {
+    const c = document.getElementById('particles-contact');
+    if (!c) return;
+    for (let i = 0; i < 14; i++) {
+      const p = document.createElement('div');
+      const size = Math.random() * 4 + 2;
+      p.className = 'particle';
+      p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random() * 100}%;top:${Math.random() * 100}%;background:${Math.random() > 0.5 ? '#00ff88' : '#00b4d8'};animation-duration:${Math.random() * 15 + 10}s;animation-delay:${Math.random() * 8}s;`;
+      c.appendChild(p);
+    }
+  })();
 </script>
-
+<script src="js/main.js" defer></script>
 </body>
 </html>

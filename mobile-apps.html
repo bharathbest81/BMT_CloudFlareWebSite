@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile App Development New Zealand | Brainwave Matrix Technologies</title>
+  <meta name="description" content="Custom Android & iOS app development services in New Zealand. From concept to Play Store launch, we build fast, scalable mobile applications." />
+  <meta name="keywords" content="mobile app development NZ, Android app developer New Zealand, iOS development, cross-platform apps, Flutter developer NZ, Brainwave Matrix Technologies" />
+  <meta name="author" content="Brainwave Matrix Technologies" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://brainwavematrixtech.com/mobile-apps.html" />
+  <meta name="geo.region" content="NZ" />
+  <meta name="geo.placename" content="New Zealand" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brainwavematrixtech.com/mobile-apps.html" />
+  <meta property="og:title" content="Mobile App Development NZ | Brainwave Matrix Technologies" />
+  <meta property="og:description" content="Custom Android & iOS app development services in New Zealand. From concept to Play Store launch, we build fast, scalable mobile applications." />
+  <meta property="og:locale" content="en_NZ" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mobile App Development NZ | Brainwave Matrix Technologies" />
+  <meta name="twitter:description" content="Custom Android & iOS app development services in New Zealand. Fast, beautiful mobile apps." />
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Mobile App Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "Brainwave Matrix Technologies",
+      "url": "https://brainwavematrixtech.com",
+      "telephone": "+64-21-086-29929",
+      "email": "Brainwavematrixtech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NZ"
+      }
+    },
+    "description": "Custom Android & iOS app development services in New Zealand.",
+    "areaServed": ["NZ", "Worldwide"],
+    "serviceType": ["Mobile App Development", "Android Development", "iOS Development", "Flutter Development"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="bmt_logo.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
+  </script>
+</head>
+<body class="antialiased" style="background-color: #060f24;">
+
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="Brainwave Matrix Technologies Home">
+          <img src="bmt_logo.ico" alt="BMT Logo" class="w-12 h-12 object-contain rounded-xl shadow-lg group-hover:scale-105 transition-transform" />
+          <div class="hidden sm:block">
+            <span class="text-white font-bold text-lg leading-none">Brainwave Matrix Tech</span>
+            <span class="block text-[10px] text-green-400 font-semibold tracking-widest">Brainpower Meets Technology, Achieving Anything</span>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="index.html#about" class="nav-link text-gray-300 text-sm font-medium">About</a>
+          <a href="web-development.html" class="nav-link text-gray-300 text-sm font-medium">Web Dev</a>
+          <a href="mobile-apps.html" class="nav-link text-green-400 text-sm font-medium">Mobile Apps</a>
+          <a href="coding-academy.html" class="nav-link text-gray-300 text-sm font-medium">Academy</a>
+          <a href="portfolio.html" class="nav-link text-gray-300 text-sm font-medium">Portfolio</a>
+          <a href="contact.html" class="nav-link text-gray-300 text-sm font-medium">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="coding-academy.html" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full glow-btn">
+            <i class="fas fa-graduation-cap text-xs"></i> Enroll Now
+          </a>
+          <button id="mobile-toggle" class="lg:hidden text-gray-300 hover:text-white transition-colors p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fas fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden glass rounded-2xl mb-4 overflow-hidden">
+        <div class="px-6 py-4 flex flex-col gap-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-white/10">
+            <img src="bmt_logo.ico" alt="BMT Logo" class="w-10 h-10 object-contain rounded-lg" />
+            <span class="text-white font-bold text-sm">Brainwave Matrix Tech</span>
+          </div>
+          <a href="index.html#about" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">About</a>
+          <a href="web-development.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Web Dev</a>
+          <a href="mobile-apps.html" class="text-green-400 hover:text-green-300 transition-colors font-medium py-1" onclick="closeMobileMenu()">Mobile Apps</a>
+          <a href="coding-academy.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Academy</a>
+          <a href="portfolio.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Portfolio</a>
+          <a href="contact.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Contact</a>
+          <a href="coding-academy.html" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-semibold px-5 py-3 rounded-full glow-btn mt-2" onclick="closeMobileMenu()">
+            <i class="fas fa-graduation-cap text-xs"></i> Enroll Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative hero-bg overflow-hidden pt-20" aria-labelledby="hero-heading">
+    <div class="absolute inset-0 dot-grid opacity-20 pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute top-0 left-0 w-96 h-96 rounded-full pointer-events-none float-anim" style="background: radial-gradient(circle, rgba(0,255,136,0.12), transparent 70%); filter: blur(60px);" aria-hidden="true"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center pb-16 lg:pb-24" style="min-height:calc(100vh - 80px)">
+      <div class="grid lg:grid-cols-2 gap-16 items-center w-full">
+        <div class="text-center lg:text-left">
+          <div class="text-xs text-gray-500 mb-4 uppercase tracking-wider font-semibold reveal"><a href="index.html" class="hover:text-green-400">Home</a> &gt; Mobile Apps</div>
+          <div class="inline-flex mb-6 reveal">
+            <span class="section-badge bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-white">
+              📱 Mobile App Development
+            </span>
+          </div>
+
+          <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 reveal reveal-delay-1 text-white">
+            Transform Ideas into <span class="gradient-text">Powerful Apps</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-gray-400 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 reveal reveal-delay-2">
+            We design, build, and launch high-performance Android and cross-platform applications. From utilities to EdTech, we bring your vision to users' pockets.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start reveal reveal-delay-4">
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold px-8 py-4 rounded-full text-base glow-btn">
+              <i class="fas fa-rocket"></i> Start Your Project
+            </a>
+            <a href="#portfolio-preview" class="inline-flex items-center justify-center gap-2 border-2 border-green-500 text-green-400 font-bold px-8 py-4 rounded-full text-base glow-btn-outline hover:bg-green-500/10">
+              <i class="fas fa-mobile-alt"></i> See Our Apps
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex items-center justify-center reveal reveal-delay-2 relative">
+           <div class="w-64 h-[500px] border-[14px] border-gray-900 rounded-[3rem] bg-[#0f172a] relative shadow-2xl float-anim overflow-hidden">
+             <!-- Notch -->
+             <div class="absolute top-0 inset-x-0 h-6 bg-gray-900 rounded-b-3xl w-1/2 mx-auto z-20"></div>
+             
+             <!-- Screen Content -->
+             <div class="p-6 h-full flex flex-col relative z-10">
+               <div class="flex items-center justify-between mb-8 mt-2">
+                 <div class="w-8 h-8 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center text-sm"><i class="fas fa-user"></i></div>
+                 <div class="flex gap-1">
+                   <div class="w-1.5 h-1.5 rounded-full bg-gray-500"></div>
+                   <div class="w-1.5 h-1.5 rounded-full bg-gray-500"></div>
+                   <div class="w-1.5 h-1.5 rounded-full bg-gray-500"></div>
+                 </div>
+               </div>
+               
+               <h3 class="text-white font-bold text-xl mb-4">Dashboard</h3>
+               
+               <div class="grid grid-cols-2 gap-3 mb-6">
+                 <div class="bg-white/5 rounded-2xl p-4 border border-white/10 text-center">
+                   <div class="text-2xl mb-1">🚀</div>
+                   <div class="text-xs text-gray-400">Fast</div>
+                 </div>
+                 <div class="bg-white/5 rounded-2xl p-4 border border-white/10 text-center">
+                   <div class="text-2xl mb-1">📱</div>
+                   <div class="text-xs text-gray-400">Native</div>
+                 </div>
+                 <div class="bg-white/5 rounded-2xl p-4 border border-white/10 text-center">
+                   <div class="text-2xl mb-1">🔒</div>
+                   <div class="text-xs text-gray-400">Secure</div>
+                 </div>
+                 <div class="bg-white/5 rounded-2xl p-4 border border-white/10 text-center">
+                   <div class="text-2xl mb-1">📈</div>
+                   <div class="text-xs text-gray-400">Scale</div>
+                 </div>
+               </div>
+               
+               <div class="mt-auto bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-4 text-center text-white font-bold text-sm">
+                 Download Now
+               </div>
+             </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-20 bg-[#08132e] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <h2 class="text-3xl font-bold text-white mb-6">Why Build Your App With Us?</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-strong rounded-3xl p-8 reveal border-t-4 border-green-500">
+          <div class="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-400 text-2xl mb-6">
+            <i class="fab fa-android"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Native Android Experts</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We specialize in Kotlin and Java to build high-performance Android applications that integrate seamlessly with Google's ecosystem and hardware features.</p>
+        </div>
+        
+        <div class="glass-strong rounded-3xl p-8 reveal reveal-delay-1 border-t-4 border-blue-500">
+          <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 text-2xl mb-6">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Cross-Platform Solutions</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Want to reach iOS users too? We build beautiful cross-platform apps using Flutter, giving you a single codebase for both Apple and Google stores to save time and budget.</p>
+        </div>
+        
+        <div class="glass-strong rounded-3xl p-8 reveal reveal-delay-2 border-t-4 border-purple-500">
+          <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-400 text-2xl mb-6">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">EdTech & Utilities Focus</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">With a portfolio of successful educational apps (like Arithmetic and Number Ninjas), we know how to build engaging, interactive experiences that users love.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl font-bold text-white mb-4">Our App Development Process</h2>
+        <p class="text-gray-400 text-lg">From sketch to the Play Store.</p>
+      </div>
+
+      <div class="relative">
+        <!-- Connecting line -->
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-green-500/20 via-blue-500/20 to-purple-500/20 -translate-y-1/2 z-0"></div>
+        
+        <div class="grid md:grid-cols-4 gap-8 relative z-10">
+          <!-- Step 1 -->
+          <div class="glass p-6 rounded-2xl text-center reveal">
+            <div class="w-16 h-16 mx-auto bg-[#08132e] border-2 border-green-500 rounded-full flex items-center justify-center text-green-400 text-xl font-bold mb-4">1</div>
+            <h4 class="text-white font-bold mb-2">Strategy & UI</h4>
+            <p class="text-sm text-gray-400">Wireframes, user flows, and designing a stunning mobile interface.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="glass p-6 rounded-2xl text-center reveal reveal-delay-1">
+            <div class="w-16 h-16 mx-auto bg-[#08132e] border-2 border-blue-500 rounded-full flex items-center justify-center text-blue-400 text-xl font-bold mb-4">2</div>
+            <h4 class="text-white font-bold mb-2">Development</h4>
+            <p class="text-sm text-gray-400">Writing clean, scalable code. Integrating APIs, databases, and push notifications.</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="glass p-6 rounded-2xl text-center reveal reveal-delay-2">
+            <div class="w-16 h-16 mx-auto bg-[#08132e] border-2 border-purple-500 rounded-full flex items-center justify-center text-purple-400 text-xl font-bold mb-4">3</div>
+            <h4 class="text-white font-bold mb-2">Testing</h4>
+            <p class="text-sm text-gray-400">Rigorous QA across multiple devices, screen sizes, and OS versions.</p>
+          </div>
+          <!-- Step 4 -->
+          <div class="glass p-6 rounded-2xl text-center reveal reveal-delay-3">
+            <div class="w-16 h-16 mx-auto bg-[#08132e] border-2 border-yellow-500 rounded-full flex items-center justify-center text-yellow-400 text-xl font-bold mb-4">4</div>
+            <h4 class="text-white font-bold mb-2">Launch</h4>
+            <p class="text-sm text-gray-400">Play Store/App Store submission, ASO optimization, and post-launch support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO PREVIEW -->
+  <section id="portfolio-preview" class="py-20 bg-[#08132e] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row justify-between items-center mb-12 reveal">
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-2">Apps We've Built</h2>
+          <p class="text-gray-400">A selection of our own EdTech products.</p>
+        </div>
+        <a href="portfolio.html" class="mt-4 sm:mt-0 text-green-400 hover:text-green-300 font-semibold flex items-center gap-2 transition-colors">
+          View Full Portfolio <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Arithmetic -->
+        <a href="https://play.google.com/store/apps/details?id=com.bmt.arithmetic" target="_blank" class="glass-strong rounded-3xl p-6 hover:-translate-y-2 transition-all block group reveal">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center text-3xl">➕</div>
+            <div>
+              <h3 class="text-lg font-bold text-white group-hover:text-green-400 transition-colors">Arithmetic</h3>
+              <p class="text-xs text-gray-400">EdTech • Android</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-400 mb-4 line-clamp-2">A fun educational app designed to help kids master basic math operations through interactive challenges.</p>
+          <div class="flex items-center text-xs font-bold text-green-400">
+            View on Play Store <i class="fas fa-external-link-alt ml-1"></i>
+          </div>
+        </a>
+        
+        <!-- Number Ninjas -->
+        <a href="https://play.google.com/store/apps/details?id=com.bmt.numberninjas" target="_blank" class="glass-strong rounded-3xl p-6 hover:-translate-y-2 transition-all block group reveal reveal-delay-1">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center text-3xl">🥷</div>
+            <div>
+              <h3 class="text-lg font-bold text-white group-hover:text-green-400 transition-colors">Number Ninjas</h3>
+              <p class="text-xs text-gray-400">EdTech • Game</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-400 mb-4 line-clamp-2">An engaging math puzzle game that sharpens mental calculation speed with ninja-themed levels.</p>
+          <div class="flex items-center text-xs font-bold text-green-400">
+            View on Play Store <i class="fas fa-external-link-alt ml-1"></i>
+          </div>
+        </a>
+
+        <!-- Arithmetic Puzzle -->
+        <a href="https://play.google.com/store/apps/details?id=com.bmt.arithmeticpuzzle" target="_blank" class="glass-strong rounded-3xl p-6 hover:-translate-y-2 transition-all block group reveal reveal-delay-2">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-16 h-16 bg-yellow-500/10 rounded-2xl flex items-center justify-center text-3xl">🧩</div>
+            <div>
+              <h3 class="text-lg font-bold text-white group-hover:text-green-400 transition-colors">Arithmetic Puzzle</h3>
+              <p class="text-xs text-gray-400">EdTech • Android</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-400 mb-4 line-clamp-2">Complex mathematical brain teasers designed for advanced students and adults to test their logic.</p>
+          <div class="flex items-center text-xs font-bold text-green-400">
+            View on Play Store <i class="fas fa-external-link-alt ml-1"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 relative">
+    <div class="max-w-4xl mx-auto px-4 text-center reveal">
+      <div class="glass-strong rounded-3xl p-10 sm:p-16 relative overflow-hidden">
+        <div class="absolute inset-0 dot-grid opacity-30"></div>
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Have an App Idea?</h2>
+          <p class="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">Whether it's a productivity tool for your business or the next big consumer app, let's build it together.</p>
+          <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold px-8 py-4 rounded-full text-base glow-btn">
+            <i class="fas fa-comment-dots"></i> Discuss Your Project
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-bg pt-16 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="bmt_logo.ico" alt="BMT Logo" class="w-12 h-12 object-contain rounded-xl shadow-lg" />
+            <div>
+              <span class="text-white font-bold text-base leading-none">Brainwave Matrix Tech</span>
+              <span class="block text-[10px] text-green-400 font-semibold tracking-wide">Brainpower Meets Technology</span>
+            </div>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">New Zealand-based technology company delivering premium web, mobile, and EdTech solutions.</p>
+          <div class="flex items-center gap-2 text-xs text-gray-600"><i class="fas fa-map-marker-alt text-green-500"></i> New Zealand &bull; Global Reach</div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm">Services</h4>
+          <ul class="space-y-2.5">
+            <li><a href="web-development.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Web Design &amp; Development</a></li>
+            <li><a href="mobile-apps.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Mobile App Development</a></li>
+            <li><a href="coding-academy.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Coding for Kids</a></li>
+            <li><a href="web-development.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">SEO Optimisation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm">Our Products</h4>
+          <ul class="space-y-2.5">
+            <li><a href="https://play.google.com/store/apps/details?id=com.bmt.arithmetic" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#10133; Arithmetic</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.bmt.numberninjas" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129399; Number Ninjas</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.bmt.arithmeticpuzzle" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129513; Arithmetic Puzzle</a></li>
+            <li><a href="https://sthirabrainacademy.com/" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129504; Sthira Brain Academy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm">Contact</h4>
+          <ul class="space-y-2.5">
+            <li><a href="mailto:Brainwavematrixtech@gmail.com" class="text-gray-500 hover:text-green-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-envelope text-xs"></i> Brainwavematrixtech@gmail.com</a></li>
+            <li><a href="tel:+642108629929" class="text-gray-500 hover:text-green-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-phone text-xs"></i> +64 21 086 29929</a></li>
+            <li class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-map-marker-alt text-xs"></i> New Zealand</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-divider mb-8"></div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
+        <p>&copy; <span id="year"></span> Brainwave Matrix Tech. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-green-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-green-400 transition-colors">Terms of Service</a>
+        </div>
+        <p class="flex items-center gap-1.5"><i class="fas fa-heart text-green-500 text-xs"></i> Building EdTech for kids in New Zealand and India</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg glow-btn flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  
+  <script src="js/main.js" defer></script>
+</body>
+</html>

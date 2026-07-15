@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding Academy for Kids &amp; Students | Brainwave Matrix Technologies NZ</title>
+  <meta name="description" content="Enroll your child in BMT's coding academy. Fun, curriculum-aligned courses in Python, web development, app building and AI for kids aged 6–18. New Zealand &amp; online." />
+  <meta name="keywords" content="coding for kids New Zealand, kids coding classes NZ, learn Python kids, web development kids, programming for children NZ, EdTech NZ, coding academy New Zealand" />
+  <meta name="author" content="Brainwave Matrix Technologies" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://brainwavematrixtech.com/coding-academy.html" />
+  <meta name="geo.region" content="NZ" />
+  <meta name="geo.placename" content="New Zealand" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brainwavematrixtech.com/coding-academy.html" />
+  <meta property="og:title" content="Coding Academy for Kids &amp; Students | Brainwave Matrix Technologies NZ" />
+  <meta property="og:description" content="Enroll your child in BMT's coding academy. Fun, curriculum-aligned courses in Python, web development, app building and AI for kids aged 6–18. New Zealand &amp; online." />
+  <meta property="og:locale" content="en_NZ" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Coding Academy for Kids &amp; Students | Brainwave Matrix Technologies NZ" />
+  <meta name="twitter:description" content="Enroll your child in BMT's coding academy. Fun, curriculum-aligned courses in Python, web development, app building and AI for kids aged 6–18. New Zealand &amp; online." />
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "BMT Coding Academy",
+    "url": "https://brainwavematrixtech.com/coding-academy.html",
+    "telephone": "+64-21-086-29929",
+    "email": "Brainwavematrixtech@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "NZ"
+    },
+    "description": "Fun, curriculum-aligned courses in Python, web development, app building and AI for kids aged 6-18.",
+    "hasCourse": [
+      {
+        "@type": "Course",
+        "name": "Logic & Problem Solving",
+        "description": "Introduction to Scratch block coding, algorithm thinking and mini-games."
+      },
+      {
+        "@type": "Course",
+        "name": "Python for Beginners",
+        "description": "Variables, loops, functions, and text-based games."
+      },
+      {
+        "@type": "Course",
+        "name": "Web Development Fundamentals",
+        "description": "HTML structure, CSS styling, and JavaScript basics."
+      },
+      {
+        "@type": "Course",
+        "name": "App Building Basics",
+        "description": "Introduction to MIT App Inventor and UI/UX fundamentals."
+      },
+      {
+        "@type": "Course",
+        "name": "AI & Data for Teens",
+        "description": "Python for data science basics and building a simple ML model."
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="bmt_logo.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
+  </script>
+</head>
+<body class="antialiased" style="background-color: #060f24;">
+
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50" role="navigation" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="Brainwave Matrix Technologies Home">
+          <img src="bmt_logo.ico" alt="BMT Logo" class="w-12 h-12 object-contain rounded-xl shadow-lg group-hover:scale-105 transition-transform" />
+          <div class="hidden sm:block">
+            <span class="text-white font-bold text-lg leading-none">Brainwave Matrix Tech</span>
+            <span class="block text-[10px] text-green-400 font-semibold tracking-widest">Brainpower Meets Technology, Achieving Anything</span>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-6">
+          <a href="index.html#about" class="nav-link text-gray-300 text-sm font-medium">About</a>
+          <a href="web-development.html" class="nav-link text-gray-300 text-sm font-medium">Web Dev</a>
+          <a href="mobile-apps.html" class="nav-link text-gray-300 text-sm font-medium">Mobile Apps</a>
+          <a href="coding-academy.html" class="nav-link text-green-400 text-sm font-medium">Academy</a>
+          <a href="portfolio.html" class="nav-link text-gray-300 text-sm font-medium">Portfolio</a>
+          <a href="contact.html" class="nav-link text-gray-300 text-sm font-medium">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="coding-academy.html" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full glow-btn">
+            <i class="fas fa-graduation-cap text-xs"></i> Enroll Now
+          </a>
+          <button id="mobile-toggle" class="lg:hidden text-gray-300 hover:text-white transition-colors p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i class="fas fa-bars text-lg"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden glass rounded-2xl mb-4 overflow-hidden">
+        <div class="px-6 py-4 flex flex-col gap-4">
+          <div class="flex items-center gap-3 pb-3 border-b border-white/10">
+            <img src="bmt_logo.ico" alt="BMT Logo" class="w-10 h-10 object-contain rounded-lg" />
+            <span class="text-white font-bold text-sm">Brainwave Matrix Tech</span>
+          </div>
+          <a href="index.html#about" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">About</a>
+          <a href="web-development.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Web Dev</a>
+          <a href="mobile-apps.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Mobile Apps</a>
+          <a href="coding-academy.html" class="text-green-400 hover:text-green-300 transition-colors font-medium py-1" onclick="closeMobileMenu()">Academy</a>
+          <a href="portfolio.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Portfolio</a>
+          <a href="contact.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Contact</a>
+          <a href="coding-academy.html" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-semibold px-5 py-3 rounded-full glow-btn mt-2" onclick="closeMobileMenu()">
+            <i class="fas fa-graduation-cap text-xs"></i> Enroll Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative hero-bg overflow-hidden pt-20" aria-labelledby="hero-heading">
+    <div class="absolute inset-0 dot-grid opacity-20 pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full pointer-events-none float-anim" style="background: radial-gradient(circle, rgba(168,85,247,0.12), transparent 70%); filter: blur(60px);" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full pointer-events-none float-anim" style="background: radial-gradient(circle, rgba(0,255,136,0.12), transparent 70%); filter: blur(60px); animation-delay:-3s;" aria-hidden="true"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center pb-16 lg:pb-24" style="min-height:calc(100vh - 80px)">
+      <div class="grid lg:grid-cols-2 gap-16 items-center w-full">
+        <div class="text-center lg:text-left">
+          <div class="text-xs text-gray-500 mb-4 uppercase tracking-wider font-semibold reveal"><a href="index.html" class="hover:text-green-400">Home</a> &gt; Coding Academy</div>
+          <div class="inline-flex mb-6 reveal">
+            <span class="section-badge bg-gradient-to-r from-purple-500/20 to-green-500/20 border border-purple-500/30 text-white">
+              🎓 BMT Coding Academy
+            </span>
+          </div>
+
+          <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 reveal reveal-delay-1 text-white">
+            Where Young Minds <br/>Learn to <span class="gradient-text">Build the Future</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-gray-400 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 reveal reveal-delay-2">
+            Hands-on, fun, curriculum-aligned coding programs for kids aged 6–18. From Scratch to Python to AI — we build tomorrow's innovators today.
+          </p>
+          
+          <div class="flex flex-wrap items-center gap-4 mb-8 justify-center lg:justify-start reveal reveal-delay-3 text-sm text-gray-300">
+            <span class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> 5+ Courses</span>
+            <span class="hidden sm:inline text-gray-600">|</span>
+            <span class="flex items-center gap-2"><i class="fas fa-user-graduate text-purple-400"></i> Ages 6–18</span>
+            <span class="hidden sm:inline text-gray-600">|</span>
+            <span class="flex items-center gap-2"><i class="fas fa-laptop text-blue-400"></i> Online &amp; In-Person</span>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start reveal reveal-delay-4">
+            <a href="#enrollment-form" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-bold px-8 py-4 rounded-full text-base glow-btn">
+              <i class="fas fa-graduation-cap"></i> Enroll Now
+            </a>
+            <a href="#courses" class="inline-flex items-center justify-center gap-2 border-2 border-green-500 text-green-400 font-bold px-8 py-4 rounded-full text-base glow-btn-outline hover:bg-green-500/10">
+              <i class="fas fa-book-open"></i> View Courses
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex items-center justify-center reveal reveal-delay-2 relative">
+           <div class="glass-strong rounded-3xl p-8 float-anim shadow-2xl relative w-full max-w-md">
+             <div class="flex gap-2 mb-4">
+               <div class="w-3 h-3 rounded-full bg-red-500"></div>
+               <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+               <div class="w-3 h-3 rounded-full bg-green-500"></div>
+             </div>
+             <div class="font-mono text-sm leading-relaxed text-gray-300">
+               <div class="mb-2"><span class="text-purple-400">function</span> <span class="text-blue-400">learnToCode</span>() {</div>
+               <div class="ml-4 mb-1">const topics = [</div>
+               <div class="ml-8"><span class="text-yellow-400">"Python"</span>, <span class="text-gray-500">// 🐍</span></div>
+               <div class="ml-8"><span class="text-yellow-400">"Web Dev"</span>, <span class="text-gray-500">// 🌐</span></div>
+               <div class="ml-8"><span class="text-yellow-400">"Mobile Apps"</span>, <span class="text-gray-500">// 📱</span></div>
+               <div class="ml-8"><span class="text-yellow-400">"Logic & AI"</span> <span class="text-gray-500">// 🤖</span></div>
+               <div class="ml-4 mb-1">];</div>
+               <div class="ml-4 mb-1"><span class="text-purple-400">return</span> <span class="text-green-400">buildFuture</span>(topics);</div>
+               <div>}</div>
+             </div>
+             <!-- Floating emoji badges -->
+             <div class="absolute -top-6 -right-6 w-14 h-14 bg-white rounded-full flex items-center justify-center text-2xl shadow-xl float-anim" style="animation-delay:-1s">🐍</div>
+             <div class="absolute top-20 -left-8 w-12 h-12 bg-white rounded-full flex items-center justify-center text-xl shadow-xl float-anim" style="animation-delay:-2s">🌐</div>
+             <div class="absolute bottom-10 -right-4 w-12 h-12 bg-white rounded-full flex items-center justify-center text-xl shadow-xl float-anim" style="animation-delay:-1.5s">🤖</div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY LEARN CODING -->
+  <section class="py-20 bg-[#08132e] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">The Best Investment for Your Child's Future</h2>
+        <p class="text-gray-400 text-lg">Coding is more than just typing text. It's learning how to think, solve problems, and create.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass p-6 rounded-2xl reveal">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-2xl mb-4">🧠</div>
+          <h3 class="text-white font-bold mb-2">Develops Critical Thinking</h3>
+          <p class="text-gray-400 text-sm">Coding teaches logic and problem-solving skills that are essential in every career path.</p>
+        </div>
+        <div class="glass p-6 rounded-2xl reveal reveal-delay-1">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-2xl mb-4">💡</div>
+          <h3 class="text-white font-bold mb-2">Boosts Creativity</h3>
+          <p class="text-gray-400 text-sm">Kids don't just consume technology; they build real projects, games, and websites from scratch.</p>
+        </div>
+        <div class="glass p-6 rounded-2xl reveal reveal-delay-2">
+          <div class="w-12 h-12 rounded-xl bg-green-500/20 text-green-400 flex items-center justify-center text-2xl mb-4">🚀</div>
+          <h3 class="text-white font-bold mb-2">Future-Proof Skills</h3>
+          <p class="text-gray-400 text-sm">Technology is in every industry. Early exposure creates a long-term advantage for their career.</p>
+        </div>
+        <div class="glass p-6 rounded-2xl reveal reveal-delay-3">
+          <div class="w-12 h-12 rounded-xl bg-yellow-500/20 text-yellow-400 flex items-center justify-center text-2xl mb-4">🤝</div>
+          <h3 class="text-white font-bold mb-2">Builds Confidence</h3>
+          <p class="text-gray-400 text-sm">Completing projects and seeing immediate results gives kids a profound sense of achievement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGE GROUPS -->
+  <section id="age-groups" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">A Path for Every Age</h2>
+        <p class="text-gray-400 text-lg">Structured learning tailored to your child's developmental stage.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Beginners -->
+        <div class="glass-strong rounded-3xl p-8 border-t-4 border-green-500 reveal">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold text-white">Beginners</h3>
+            <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-bold rounded-full">Ages 6–10</span>
+          </div>
+          <p class="text-gray-400 mb-6 text-sm">The perfect start. Fun, visual learning to grasp core concepts.</p>
+          <ul class="space-y-3 mb-6 text-sm text-gray-300">
+            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> Introduction to computational thinking</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> Block-based coding with Scratch</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> Fun mini-games and animations</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-green-500 mt-1"></i> No prior experience needed</li>
+          </ul>
+        </div>
+        
+        <!-- Juniors -->
+        <div class="glass-strong rounded-3xl p-8 border-t-4 border-blue-500 reveal reveal-delay-1">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold text-white">Junior Coders</h3>
+            <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-bold rounded-full">Ages 11–14</span>
+          </div>
+          <p class="text-gray-400 mb-6 text-sm">Transitioning to text-based code and real-world tools.</p>
+          <ul class="space-y-3 mb-6 text-sm text-gray-300">
+            <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-1"></i> Python fundamentals</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-1"></i> Web basics (HTML/CSS)</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-1"></i> Building real small projects</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-blue-500 mt-1"></i> Introduction to problem solving</li>
+          </ul>
+        </div>
+        
+        <!-- Advanced -->
+        <div class="glass-strong rounded-3xl p-8 border-t-4 border-purple-500 reveal reveal-delay-2">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold text-white">Advanced</h3>
+            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full">Ages 15–18</span>
+          </div>
+          <p class="text-gray-400 mb-6 text-sm">Preparing for university, tech careers, and complex projects.</p>
+          <ul class="space-y-3 mb-6 text-sm text-gray-300">
+            <li class="flex items-start gap-2"><i class="fas fa-check text-purple-500 mt-1"></i> Full Python programming</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-purple-500 mt-1"></i> Web development (HTML/CSS/JS)</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-purple-500 mt-1"></i> Introduction to AI &amp; data</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-purple-500 mt-1"></i> Portfolio project development</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section id="courses" class="py-20 bg-[#08132e] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="section-badge mb-4">Our Curriculum</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Courses Offered</h2>
+        <p class="text-gray-400 text-lg">Explore our comprehensive range of coding programs.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Logic & Problem Solving -->
+        <div class="service-card rounded-3xl p-6 reveal flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-2xl">🧩</div>
+            <div>
+              <h3 class="text-lg font-bold text-white">Logic &amp; Problem Solving</h3>
+              <div class="text-xs text-gray-400">Ages 6–10 | 6 weeks</div>
+            </div>
+          </div>
+          <ul class="space-y-2 mb-6 text-sm text-gray-300 flex-grow">
+            <li>• Intro to Scratch block coding</li>
+            <li>• Build simple games and animations</li>
+            <li>• Algorithmic thinking basics</li>
+            <li>• Pattern recognition challenges</li>
+            <li>• Fun computational puzzles</li>
+          </ul>
+          <a href="#enrollment-form" class="inline-block text-center w-full py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white text-sm font-semibold transition-colors mt-auto border border-white/10">Enroll in This Course</a>
+        </div>
+
+        <!-- Python for Beginners -->
+        <div class="service-card rounded-3xl p-6 reveal reveal-delay-1 flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-2xl">🐍</div>
+            <div>
+              <h3 class="text-lg font-bold text-white">Python for Beginners</h3>
+              <div class="text-xs text-gray-400">Ages 10–14 | 8 weeks</div>
+            </div>
+          </div>
+          <ul class="space-y-2 mb-6 text-sm text-gray-300 flex-grow">
+            <li>• Variables, loops, conditionals</li>
+            <li>• Functions and basic data structures</li>
+            <li>• Build text-based games</li>
+            <li>• Intro to turtle graphics</li>
+            <li>• Mini capstone project</li>
+          </ul>
+          <a href="#enrollment-form" class="inline-block text-center w-full py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white text-sm font-semibold transition-colors mt-auto border border-white/10">Enroll in This Course</a>
+        </div>
+
+        <!-- Web Development -->
+        <div class="service-card rounded-3xl p-6 reveal reveal-delay-2 flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center text-2xl">🌐</div>
+            <div>
+              <h3 class="text-lg font-bold text-white">Web Dev Fundamentals</h3>
+              <div class="text-xs text-gray-400">Ages 12–16 | 8 weeks</div>
+            </div>
+          </div>
+          <ul class="space-y-2 mb-6 text-sm text-gray-300 flex-grow">
+            <li>• HTML structure &amp; markup</li>
+            <li>• CSS styling and layouts</li>
+            <li>• JavaScript basics &amp; interactivity</li>
+            <li>• Build your first real website</li>
+            <li>• Publish to the web</li>
+          </ul>
+          <a href="#enrollment-form" class="inline-block text-center w-full py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white text-sm font-semibold transition-colors mt-auto border border-white/10">Enroll in This Course</a>
+        </div>
+
+        <!-- App Building -->
+        <div class="service-card rounded-3xl p-6 reveal flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-2xl">📱</div>
+            <div>
+              <h3 class="text-lg font-bold text-white">App Building Basics</h3>
+              <div class="text-xs text-gray-400">Ages 13–17 | 10 weeks</div>
+            </div>
+          </div>
+          <ul class="space-y-2 mb-6 text-sm text-gray-300 flex-grow">
+            <li>• Introduction to app concepts</li>
+            <li>• MIT App Inventor basics</li>
+            <li>• Build a working Android app</li>
+            <li>• UI/UX fundamentals for apps</li>
+            <li>• Publish to Play Store preview</li>
+          </ul>
+          <a href="#enrollment-form" class="inline-block text-center w-full py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white text-sm font-semibold transition-colors mt-auto border border-white/10">Enroll in This Course</a>
+        </div>
+
+        <!-- AI & Data -->
+        <div class="service-card rounded-3xl p-6 reveal reveal-delay-1 flex flex-col h-full">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-yellow-500/20 flex items-center justify-center text-2xl">🤖</div>
+            <div>
+              <h3 class="text-lg font-bold text-white">AI &amp; Data for Teens</h3>
+              <div class="text-xs text-gray-400">Ages 15–18 | 10 weeks</div>
+            </div>
+          </div>
+          <ul class="space-y-2 mb-6 text-sm text-gray-300 flex-grow">
+            <li>• What is AI and how it works</li>
+            <li>• Python for data science basics</li>
+            <li>• Working with datasets</li>
+            <li>• Build a simple ML model</li>
+            <li>• Ethics and responsible AI</li>
+          </ul>
+          <a href="#enrollment-form" class="inline-block text-center w-full py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white text-sm font-semibold transition-colors mt-auto border border-white/10">Enroll in This Course</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS & OUTCOMES -->
+  <section class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Philosophy & Structure -->
+      <div class="grid lg:grid-cols-2 gap-16 mb-20">
+        <div class="reveal">
+          <h2 class="text-3xl font-bold text-white mb-6">Our Teaching Philosophy</h2>
+          <div class="space-y-6">
+            <div>
+              <h4 class="text-lg font-bold text-green-400 mb-1">Learn by Doing</h4>
+              <p class="text-gray-400 text-sm">Every concept is immediately applied in a real project. Theory follows practice.</p>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-purple-400 mb-1">No Child Left Behind</h4>
+              <p class="text-gray-400 text-sm">Adaptive pace ensures every student understands before moving on.</p>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-blue-400 mb-1">Curiosity-Driven</h4>
+              <p class="text-gray-400 text-sm">We spark interest first, teach syntax second. Coding should be fun.</p>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-yellow-400 mb-1">Real Tools</h4>
+              <p class="text-gray-400 text-sm">Students use the same tools professionals use, preparing them for real-world scenarios.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass-strong rounded-3xl p-8 reveal reveal-delay-1 self-center">
+          <h3 class="text-2xl font-bold text-white mb-6">How Our Classes Work</h3>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4 border-b border-white/10 pb-4">
+              <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0"><i class="fas fa-video"></i></div>
+              <div>
+                <h4 class="text-white font-semibold">Flexible Format</h4>
+                <p class="text-sm text-gray-400 mt-1">Online (via Zoom/Meet) and In-Person sessions available.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 border-b border-white/10 pb-4">
+              <div class="w-10 h-10 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center shrink-0"><i class="fas fa-clock"></i></div>
+              <div>
+                <h4 class="text-white font-semibold">Session Duration</h4>
+                <p class="text-sm text-gray-400 mt-1">1-hour sessions, once or twice a week with homework projects.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0"><i class="fas fa-users"></i></div>
+              <div>
+                <h4 class="text-white font-semibold">Small Class Sizes</h4>
+                <p class="text-sm text-gray-400 mt-1">Max 8 students per group for personalised attention. Includes parent progress updates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning Outcomes -->
+      <div class="text-center mb-10 reveal">
+        <h2 class="text-3xl font-bold text-white mb-4">What Your Child Will Build</h2>
+        <p class="text-gray-400">Students walk away with a portfolio of real, working projects.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 reveal reveal-delay-1">
+        <div class="glass p-4 rounded-xl text-center flex flex-col items-center justify-center">
+          <span class="text-3xl mb-2">🎮</span>
+          <span class="text-sm text-gray-300 font-medium">Custom Scratch Game</span>
+        </div>
+        <div class="glass p-4 rounded-xl text-center flex flex-col items-center justify-center">
+          <span class="text-3xl mb-2">❓</span>
+          <span class="text-sm text-gray-300 font-medium">Python Quiz Game</span>
+        </div>
+        <div class="glass p-4 rounded-xl text-center flex flex-col items-center justify-center">
+          <span class="text-3xl mb-2">🌍</span>
+          <span class="text-sm text-gray-300 font-medium">Personal Website</span>
+        </div>
+        <div class="glass p-4 rounded-xl text-center flex flex-col items-center justify-center">
+          <span class="text-3xl mb-2">🧮</span>
+          <span class="text-sm text-gray-300 font-medium">Working Calculator App</span>
+        </div>
+        <div class="glass p-4 rounded-xl text-center flex flex-col items-center justify-center">
+          <span class="text-3xl mb-2">📊</span>
+          <span class="text-sm text-gray-300 font-medium">Data Visualisation</span>
+        </div>
+        <div class="glass p-4 rounded-xl text-center flex flex-col items-center justify-center">
+          <span class="text-3xl mb-2">💬</span>
+          <span class="text-sm text-gray-300 font-medium">Basic AI Chatbot</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="py-20 bg-[#08132e] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Pricing &amp; Plans</h2>
+        <p class="text-gray-400 text-lg">All plans include course materials and instructor support. Contact us for detailed pricing.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
+        <!-- Trial -->
+        <div class="glass-strong rounded-3xl p-8 reveal">
+          <h3 class="text-xl font-bold text-white mb-2">Trial Class</h3>
+          <div class="text-2xl font-bold text-blue-400 mb-4">Get in touch</div>
+          <p class="text-sm text-gray-400 mb-6">Perfect for trying it out before committing.</p>
+          <ul class="space-y-3 mb-8 text-sm text-gray-300">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Single intro session</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Meet the instructor</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Try a mini-project</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> No commitment</li>
+          </ul>
+          <a href="#enrollment-form" class="block w-full text-center py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors">Book a Trial</a>
+        </div>
+        
+        <!-- Monthly -->
+        <div class="glass-strong rounded-3xl p-8 border-2 border-green-500 relative transform md:-translate-y-4 shadow-[0_0_30px_rgba(0,255,136,0.2)] reveal reveal-delay-1">
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-500 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide">Most Popular</div>
+          <h3 class="text-xl font-bold text-white mb-2">Monthly Plan</h3>
+          <div class="text-2xl font-bold text-green-400 mb-4">Contact for pricing</div>
+          <p class="text-sm text-gray-400 mb-6">Flexible learning, month by month.</p>
+          <ul class="space-y-3 mb-8 text-sm text-gray-300">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Weekly sessions</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Course materials included</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Parent progress reports</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Certificate on completion</li>
+          </ul>
+          <a href="#enrollment-form" class="block w-full text-center py-3 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold hover:shadow-lg transition-all">Enroll Now</a>
+        </div>
+        
+        <!-- Full Term -->
+        <div class="glass-strong rounded-3xl p-8 reveal reveal-delay-2">
+          <h3 class="text-xl font-bold text-white mb-2">Full Term</h3>
+          <div class="text-2xl font-bold text-purple-400 mb-4">Contact for pricing</div>
+          <p class="text-sm text-gray-400 mb-6">Complete course package.</p>
+          <ul class="space-y-3 mb-8 text-sm text-gray-300">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> 8–10 week structured course</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> All materials included</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Priority booking</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Course completion portfolio</li>
+          </ul>
+          <a href="#enrollment-form" class="block w-full text-center py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors">Enroll for Term</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENROLLMENT FORM -->
+  <section id="enrollment-form" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+        <div class="lg:col-span-2 reveal">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Begin Your Journey</h2>
+          <p class="text-gray-400 text-lg mb-10">Fill out this form to express interest or enroll. We'll be in touch to finalize the details.</p>
+          
+          <div class="space-y-8">
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold shrink-0">1</div>
+              <div>
+                <h4 class="text-white font-semibold text-lg">Submit Form</h4>
+                <p class="text-gray-400 text-sm mt-1">Tell us about your child and course interests.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold shrink-0">2</div>
+              <div>
+                <h4 class="text-white font-semibold text-lg">We Contact You</h4>
+                <p class="text-gray-400 text-sm mt-1">We'll reach out within 24 hours to answer any questions.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 font-bold shrink-0">3</div>
+              <div>
+                <h4 class="text-white font-semibold text-lg">Free Intro Call</h4>
+                <p class="text-gray-400 text-sm mt-1">We'll schedule a quick call to ensure the perfect fit.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center text-yellow-400 font-bold shrink-0">4</div>
+              <div>
+                <h4 class="text-white font-semibold text-lg">Start Learning!</h4>
+                <p class="text-gray-400 text-sm mt-1">Your child joins their first class and starts building.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 reveal reveal-delay-1">
+          <div class="glass-strong rounded-3xl p-6 sm:p-10 relative">
+            
+            <form action="https://api.web3forms.com/submit" method="POST" id="academy-form">
+              <input type="hidden" name="access_key" value="f1d67150-9872-4241-91ad-c6682e923535">
+              <input type="hidden" name="subject" value="Coding Academy Enrollment Enquiry — BMT">
+              <input type="hidden" name="from_name" value="BMT Coding Academy">
+              
+              <!-- Honeypot -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+              <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-2">About the Student</h3>
+              <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                <div>
+                  <label class="block text-xs text-gray-400 mb-1 ml-2">Child's Full Name *</label>
+                  <input type="text" name="Student Name" required class="form-input w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all" placeholder="E.g., John Doe" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-400 mb-1 ml-2">Child's Age *</label>
+                  <input type="number" name="Student Age" min="6" max="18" required class="form-input w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all" placeholder="E.g., 10" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block text-xs text-gray-400 mb-1 ml-2">Current School Year / Grade</label>
+                  <input type="text" name="School Year" class="form-input w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all" placeholder="Optional" />
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-2">Course Selection</h3>
+              <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                <div class="sm:col-span-2">
+                  <label class="block text-xs text-gray-400 mb-1 ml-2">Course Interested In *</label>
+                  <select name="Selected Course" required class="form-input w-full px-5 py-3.5 rounded-xl bg-[#0b1b42] border border-white/10 text-white focus:outline-none focus:border-purple-500 transition-all cursor-pointer">
+                    <option value="">-- Select a Course --</option>
+                    <option value="Logic & Problem Solving">🧩 Logic &amp; Problem Solving</option>
+                    <option value="Python for Beginners">🐍 Python for Beginners</option>
+                    <option value="Web Development Fundamentals">🌐 Web Dev Fundamentals</option>
+                    <option value="App Building Basics">📱 App Building Basics</option>
+                    <option value="AI & Data for Teens">🤖 AI &amp; Data for Teens</option>
+                    <option value="Not Sure">Not sure — help me choose</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-400 mb-1 ml-2">Preferred Schedule *</label>
+                  <select name="Preferred Schedule" required class="form-input w-full px-5 py-3.5 rounded-xl bg-[#0b1b42] border border-white/10 text-white focus:outline-none focus:border-purple-500 transition-all cursor-pointer">
+                    <option value="">-- Select --</option>
+                    <option value="Weekday Afternoon">Weekday Afternoon</option>
+                    <option value="Weekday Evening">Weekday Evening</option>
+                    <option value="Weekend Morning">Weekend Morning</option>
+                    <option value="Weekend Afternoon">Weekend Afternoon</option>
+                    <option value="Flexible">Flexible</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-400 mb-1 ml-2">Learning Mode *</label>
+                  <select name="Learning Mode" required class="form-input w-full px-5 py-3.5 rounded-xl bg-[#0b1b42] border border-white/10 text-white focus:outline-none focus:border-purple-500 transition-all cursor-pointer">
+                    <option value="">-- Select --</option>
+                    <option value="Online">Online</option>
+                    <option value="In-Person">In-Person</option>
+                    <option value="Either">Either</option>
+                  </select>
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-2">Parent/Guardian Details</h3>
+              <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                <div class="sm:col-span-2">
+                  <label class="block text-xs text-gray-400 mb-1 ml-2">Parent/Guardian Name *</label>
+                  <input type="text" name="Parent Name" required class="form-input w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all" placeholder="Your Name" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-400 mb-1 ml-2">Email Address *</label>
+                  <input type="email" name="email" required class="form-input w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all" placeholder="name@example.com" />
+                </div>
+                <div>
+                  <label class="block text-xs text-gray-400 mb-1 ml-2">Phone Number *</label>
+                  <input type="tel" name="phone" required class="form-input w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all" placeholder="+64 21 000 0000" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block text-xs text-gray-400 mb-1 ml-2">Special Requirements / Questions</label>
+                  <textarea name="message" rows="3" class="form-input w-full px-5 py-3.5 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all resize-none" placeholder="Anything else we should know?"></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="w-full bg-gradient-to-r from-purple-500 to-green-500 text-white font-bold px-8 py-4 rounded-xl hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-lg">
+                <i class="fas fa-paper-plane"></i> Submit Enrollment Enquiry
+              </button>
+            </form>
+            
+            <div id="form-result" class="hidden absolute inset-0 bg-[#060f24]/95 backdrop-blur-md rounded-3xl flex-col items-center justify-center text-center p-8 z-10">
+              <div class="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center mb-6">
+                <i class="fas fa-check text-4xl text-green-400"></i>
+              </div>
+              <h3 class="text-3xl font-bold text-white mb-4">Thank You!</h3>
+              <p class="text-gray-300 text-lg max-w-sm mx-auto">Your enquiry has been submitted. We'll be in touch within 24 hours to confirm your child's enrollment details.</p>
+              <button onclick="document.getElementById('form-result').classList.add('hidden'); document.getElementById('academy-form').reset();" class="mt-8 px-6 py-2 rounded-full border border-white/20 text-white hover:bg-white/10 transition-colors">
+                Submit Another
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-[#08132e] relative">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+      </div>
+      
+      <div class="space-y-4 reveal reveal-delay-1">
+        <details class="glass p-5 rounded-2xl group cursor-pointer" open>
+          <summary class="font-bold text-white flex justify-between items-center outline-none">
+            What age can my child start?
+            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-gray-400 text-sm mt-4 leading-relaxed">Children can start as early as age 6. Our Logic &amp; Problem Solving course uses visual block-based coding which is perfect for young beginners who are still developing reading and typing skills.</p>
+        </details>
+        <details class="glass p-5 rounded-2xl group cursor-pointer">
+          <summary class="font-bold text-white flex justify-between items-center outline-none">
+            Do I need to buy any special equipment?
+            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-gray-400 text-sm mt-4 leading-relaxed">No special equipment is required! A standard laptop or desktop computer (Windows or Mac) with an internet connection is all you need. We use browser-based tools and free software for our courses.</p>
+        </details>
+        <details class="glass p-5 rounded-2xl group cursor-pointer">
+          <summary class="font-bold text-white flex justify-between items-center outline-none">
+            Are classes online or in-person?
+            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-gray-400 text-sm mt-4 leading-relaxed">We offer both! You can choose fully online, interactive sessions via Zoom/Meet, or in-person classes if you are located near our New Zealand training centres.</p>
+        </details>
+        <details class="glass p-5 rounded-2xl group cursor-pointer">
+          <summary class="font-bold text-white flex justify-between items-center outline-none">
+            What if my child has no experience at all?
+            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-gray-400 text-sm mt-4 leading-relaxed">That's completely fine! Our beginner courses assume zero prior knowledge. We start from the very basics and build up at a pace comfortable for every student.</p>
+        </details>
+        <details class="glass p-5 rounded-2xl group cursor-pointer">
+          <summary class="font-bold text-white flex justify-between items-center outline-none">
+            Will my child get a certificate?
+            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-gray-400 text-sm mt-4 leading-relaxed">Yes, students receive a certificate of completion at the end of each term/course, highlighting the specific skills they've mastered and projects they've built.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-bg pt-16 pb-8" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div class="sm:col-span-2 lg:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="bmt_logo.ico" alt="BMT Logo" class="w-12 h-12 object-contain rounded-xl shadow-lg" />
+            <div>
+              <span class="text-white font-bold text-base leading-none">Brainwave Matrix Tech</span>
+              <span class="block text-[10px] text-green-400 font-semibold tracking-wide">Brainpower Meets Technology</span>
+            </div>
+          </div>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">New Zealand-based technology company delivering premium web, mobile, and EdTech solutions.</p>
+          <div class="flex items-center gap-2 text-xs text-gray-600"><i class="fas fa-map-marker-alt text-green-500"></i> New Zealand &bull; Global Reach</div>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm">Services</h4>
+          <ul class="space-y-2.5">
+            <li><a href="web-development.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Web Design &amp; Development</a></li>
+            <li><a href="mobile-apps.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Mobile App Development</a></li>
+            <li><a href="coding-academy.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Coding for Kids</a></li>
+            <li><a href="web-development.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">SEO Optimisation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm">Our Products</h4>
+          <ul class="space-y-2.5">
+            <li><a href="https://play.google.com/store/apps/details?id=com.bmt.arithmetic" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#10133; Arithmetic</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.bmt.numberninjas" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129399; Number Ninjas</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.bmt.arithmeticpuzzle" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129513; Arithmetic Puzzle</a></li>
+            <li><a href="https://sthirabrainacademy.com/" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129504; Sthira Brain Academy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4 text-sm">Contact</h4>
+          <ul class="space-y-2.5">
+            <li><a href="mailto:Brainwavematrixtech@gmail.com" class="text-gray-500 hover:text-green-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-envelope text-xs"></i> Brainwavematrixtech@gmail.com</a></li>
+            <li><a href="tel:+642108629929" class="text-gray-500 hover:text-green-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-phone text-xs"></i> +64 21 086 29929</a></li>
+            <li class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-map-marker-alt text-xs"></i> New Zealand</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section-divider mb-8"></div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
+        <p>&copy; <span id="year"></span> Brainwave Matrix Tech. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="hover:text-green-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-green-400 transition-colors">Terms of Service</a>
+        </div>
+        <p class="flex items-center gap-1.5"><i class="fas fa-heart text-green-500 text-xs"></i> Building EdTech for kids in New Zealand and India</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg glow-btn flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  
+  <script src="js/main.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById('academy-form');
+      const result = document.getElementById('form-result');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+          
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: json
+          })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              result.classList.remove('hidden');
+              result.classList.add('flex');
+            } else {
+              console.log(response);
+            }
+          })
+          .catch(error => {
+            console.log(error);
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

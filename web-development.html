@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design &amp; Development Services New Zealand | Brainwave Matrix Technologies</title>
+  <meta name="description" content="Professional web design and development services in New Zealand. SEO-optimised, mobile-first websites built with React, Next.js &amp; Python. Custom business sites, e-commerce &amp; CMS solutions." />
+  <meta name="keywords" content="web development New Zealand, web design NZ, SEO website development, React developer NZ, custom website design, e-commerce website NZ, Brainwave Matrix Technologies" />
+  <meta name="author" content="Brainwave Matrix Technologies" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://brainwavematrixtech.com/web-development.html" />
+  <meta name="geo.region" content="NZ" />
+  <meta name="geo.placename" content="New Zealand" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brainwavematrixtech.com/web-development.html" />
+  <meta property="og:title" content="Web Design &amp; Development NZ | Brainwave Matrix Technologies" />
+  <meta property="og:description" content="Professional web design and development services in New Zealand. SEO-optimised, mobile-first websites built with React, Next.js &amp; Python." />
+  <meta property="og:locale" content="en_NZ" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Web Design &amp; Development NZ | Brainwave Matrix Technologies" />
+  <meta name="twitter:description" content="Professional web design and development in New Zealand. Fast, beautiful, SEO-optimised websites that convert visitors into customers." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Web Design & Development",
+    "provider": {
+      "@type": "Organization",
+      "name": "Brainwave Matrix Technologies",
+      "url": "https://brainwavematrixtech.com",
+      "telephone": "+64-21-086-29929",
+      "email": "Brainwavematrixtech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NZ"
+      }
+    },
+    "description": "Professional web design and development services in New Zealand. SEO-optimised, mobile-first websites built with React, Next.js & Python.",
+    "areaServed": ["NZ", "Worldwide"],
+    "serviceType": ["Web Design", "Web Development", "E-Commerce Development", "SEO Optimisation", "CMS Development"]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="css/styles.css" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="bmt_logo.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['JetBrains Mono','monospace'] } } } }
+  </script>
+  <style>
+    /* ── Page-specific styles ── */
+    :root { --accent: #00ff88; --blue: #00b4d8; --bg: #060f24; }
+    body { background-color: var(--bg); color: #e2e8f0; font-family: 'Inter', sans-serif; }
+
+    /* Browser mockup */
+    .browser-mockup { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10); border-radius: 16px; overflow: hidden; box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 60px rgba(0,255,136,0.06); }
+    .browser-bar { background: rgba(255,255,255,0.06); padding: 12px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .browser-url { flex: 1; background: rgba(255,255,255,0.06); border-radius: 20px; padding: 4px 12px; font-size: 11px; color: #64748b; font-family: 'JetBrains Mono', monospace; margin: 0 8px; }
+    .browser-content { padding: 20px; min-height: 280px; }
+    .code-line { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+    .code-line-num { color: #334155; width: 20px; text-align: right; flex-shrink: 0; }
+    .code-keyword { color: #c084fc; }
+    .code-string { color: #86efac; }
+    .code-func { color: #60a5fa; }
+    .code-comment { color: #475569; }
+    .code-tag { color: #f87171; }
+    .code-attr { color: #fbbf24; }
+    .typing-cursor { display: inline-block; width: 2px; height: 14px; background: var(--accent); animation: blink 1s infinite; vertical-align: middle; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    /* Process steps */
+    .process-step { position: relative; }
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: calc(50% + 28px);
+      width: calc(100% - 56px);
+      height: 2px;
+      background: linear-gradient(90deg, rgba(0,255,136,0.4), rgba(0,180,216,0.4));
+    }
+    @media(max-width:768px) { .process-step:not(:last-child)::after { display:none; } }
+    .step-number { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #00ff88, #00b4d8); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; color: #060f24; margin: 0 auto 16px; box-shadow: 0 0 24px rgba(0,255,136,0.3); flex-shrink: 0; }
+
+    /* Tech stack tags */
+    .tech-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: 50px; padding: 10px 20px; font-size: 14px; font-weight: 500; color: #cbd5e1; transition: all 0.3s; cursor: default; }
+    .tech-pill:hover { border-color: rgba(0,255,136,0.4); color: #00ff88; background: rgba(0,255,136,0.06); transform: translateY(-2px); }
+
+    /* Pricing */
+    .pricing-card { position: relative; border-radius: 24px; padding: 36px 32px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); backdrop-filter: blur(16px); transition: all 0.4s; }
+    .pricing-card:hover { transform: translateY(-8px); border-color: rgba(0,255,136,0.25); box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 40px rgba(0,255,136,0.08); }
+    .pricing-card.featured { border-color: rgba(0,255,136,0.35); background: rgba(0,255,136,0.04); box-shadow: 0 0 40px rgba(0,255,136,0.10); }
+    .pricing-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #00ff88, #00b4d8); color: #060f24; font-size: 11px; font-weight: 800; padding: 4px 16px; border-radius: 20px; letter-spacing: 0.05em; white-space: nowrap; }
+    .pricing-feature { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; color: #94a3b8; }
+    .pricing-feature i { color: #00ff88; font-size: 12px; flex-shrink: 0; }
+
+    /* FAQ accordion */
+    .faq-item { border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; overflow: hidden; margin-bottom: 12px; background: rgba(255,255,255,0.02); transition: border-color 0.3s; }
+    .faq-item.open { border-color: rgba(0,255,136,0.25); }
+    .faq-question { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; cursor: pointer; font-size: 15px; font-weight: 600; color: #e2e8f0; gap: 16px; }
+    .faq-question:hover { color: #00ff88; }
+    .faq-icon { width: 28px; height: 28px; border-radius: 50%; background: rgba(0,255,136,0.10); display: flex; align-items: center; justify-content: center; color: #00ff88; font-size: 12px; flex-shrink: 0; transition: transform 0.3s; }
+    .faq-item.open .faq-icon { transform: rotate(180deg); background: rgba(0,255,136,0.2); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
+    .faq-answer-inner { padding: 0 24px 20px; color: #94a3b8; font-size: 14px; line-height: 1.7; }
+
+    /* Why choose BMT */
+    .benefit-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; border-radius: 16px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; }
+    .benefit-item:hover { border-color: rgba(0,255,136,0.2); background: rgba(0,255,136,0.03); }
+    .benefit-icon { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, rgba(0,255,136,0.15), rgba(0,180,216,0.15)); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+
+    /* Form contact */
+    .contact-benefit { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .contact-benefit:last-child { border-bottom: none; }
+    .contact-benefit-icon { width: 36px; height: 36px; border-radius: 10px; background: rgba(0,255,136,0.12); display: flex; align-items: center; justify-content: center; color: #00ff88; font-size: 14px; flex-shrink: 0; }
+
+    /* Floating particles */
+    .particle { position: absolute; border-radius: 50%; pointer-events: none; animation: float-particle linear infinite; opacity: 0.3; }
+    @keyframes float-particle { 0%{transform:translateY(0) rotate(0deg);opacity:0.3} 50%{opacity:0.15} 100%{transform:translateY(-100vh) rotate(360deg);opacity:0} }
+
+    /* What we build cards */
+    .build-card { position: relative; border-radius: 20px; padding: 32px 28px; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.025); backdrop-filter: blur(12px); transition: all 0.4s; overflow: hidden; }
+    .build-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at top right, rgba(0,255,136,0.06) 0%, transparent 60%); opacity: 0; transition: opacity 0.4s; }
+    .build-card:hover { transform: translateY(-6px); border-color: rgba(0,255,136,0.25); box-shadow: 0 20px 50px rgba(0,0,0,0.35), 0 0 30px rgba(0,255,136,0.06); }
+    .build-card:hover::before { opacity: 1; }
+    .build-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 18px; }
+
+    /* Animated gradient text */
+    @keyframes gradient-shift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    .gradient-text-animated { background: linear-gradient(135deg, #00ff88, #00b4d8, #a855f7, #00ff88); background-size: 300% 300%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradient-shift 4s ease infinite; }
+
+    /* Pulsing ring */
+    @keyframes pulse-ring { 0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(0,255,136,0.3)} 70%{transform:scale(1);box-shadow:0 0 0 16px rgba(0,255,136,0)} 100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(0,255,136,0)} }
+
+    /* Success message */
+    #form-success { display: none; }
+    #form-success.show { display: flex; }
+  </style>
+</head>
+<body class="antialiased">
+
+<!-- ═══════════════════════════════════ NAVBAR ═══════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50" role="navigation" aria-label="Main navigation">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="Brainwave Matrix Technologies Home">
+        <img src="bmt_logo.ico" alt="BMT Logo" class="w-12 h-12 object-contain rounded-xl shadow-lg group-hover:scale-105 transition-transform" />
+        <div class="hidden sm:block">
+          <span class="text-white font-bold text-lg leading-none">Brainwave Matrix Tech</span>
+          <span class="block text-[10px] text-green-400 font-semibold tracking-widest">Brainpower Meets Technology, Achieving Anything</span>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-6">
+        <a href="index.html#about" class="nav-link text-gray-300 text-sm font-medium">About</a>
+        <a href="web-development.html" class="nav-link text-gray-300 text-sm font-medium">Web Dev</a>
+        <a href="mobile-apps.html" class="nav-link text-gray-300 text-sm font-medium">Mobile Apps</a>
+        <a href="coding-academy.html" class="nav-link text-gray-300 text-sm font-medium">Academy</a>
+        <a href="portfolio.html" class="nav-link text-gray-300 text-sm font-medium">Portfolio</a>
+        <a href="contact.html" class="nav-link text-gray-300 text-sm font-medium">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="coding-academy.html" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full glow-btn">
+          <i class="fas fa-graduation-cap text-xs"></i> Enroll Now
+        </a>
+        <button id="mobile-toggle" class="lg:hidden text-gray-300 hover:text-white transition-colors p-2" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden glass rounded-2xl mb-4 overflow-hidden">
+      <div class="px-6 py-4 flex flex-col gap-4">
+        <div class="flex items-center gap-3 pb-3 border-b border-white/10">
+          <img src="bmt_logo.ico" alt="BMT Logo" class="w-10 h-10 object-contain rounded-lg" />
+          <span class="text-white font-bold text-sm">Brainwave Matrix Tech</span>
+        </div>
+        <a href="index.html#about" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">About</a>
+        <a href="web-development.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Web Dev</a>
+        <a href="mobile-apps.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Mobile Apps</a>
+        <a href="coding-academy.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Academy</a>
+        <a href="portfolio.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Portfolio</a>
+        <a href="contact.html" class="text-gray-300 hover:text-green-400 transition-colors font-medium py-1" onclick="closeMobileMenu()">Contact</a>
+        <a href="coding-academy.html" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-semibold px-5 py-3 rounded-full glow-btn mt-2" onclick="closeMobileMenu()">
+          <i class="fas fa-graduation-cap text-xs"></i> Enroll Now
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+<section class="pt-20 relative overflow-hidden hero-bg" aria-label="Web Development Services Hero">
+  <!-- Particles -->
+  <div class="absolute inset-0 pointer-events-none" id="particles-hero" aria-hidden="true"></div>
+  <!-- Dot grid bg -->
+  <div class="dot-grid absolute inset-0 opacity-30" aria-hidden="true"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="min-height:calc(100vh - 80px);">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 py-20 min-h-[inherit]">
+
+      <!-- Left Content -->
+      <div class="flex-1 text-center lg:text-left">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center justify-center lg:justify-start gap-2 text-sm text-gray-500">
+            <li><a href="index.html" class="hover:text-green-400 transition-colors">Home</a></li>
+            <li><i class="fas fa-chevron-right text-xs text-gray-600"></i></li>
+            <li class="text-green-400 font-medium">Web Development</li>
+          </ol>
+        </nav>
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 section-badge mb-6 reveal">
+          <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+          <span>Web Design &amp; Development</span>
+        </div>
+
+        <!-- H1 -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 reveal reveal-delay-1">
+          Your Digital Presence,<br />
+          <span class="gradient-text-animated">Engineered for Growth</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="text-gray-400 text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0 reveal reveal-delay-2">
+          We build fast, beautiful, SEO-optimised websites that turn visitors into customers. From business brochure sites to full-scale e-commerce platforms — crafted with precision in New Zealand.
+        </p>
+
+        <!-- Stats row -->
+        <div class="flex items-center justify-center lg:justify-start gap-8 mb-10 reveal reveal-delay-2">
+          <div class="text-center">
+            <div class="text-2xl font-black text-green-400">100%</div>
+            <div class="text-xs text-gray-500 mt-0.5">Mobile-First</div>
+          </div>
+          <div class="w-px h-10 bg-white/10"></div>
+          <div class="text-center">
+            <div class="text-2xl font-black text-blue-400">SEO</div>
+            <div class="text-xs text-gray-500 mt-0.5">Built-In</div>
+          </div>
+          <div class="w-px h-10 bg-white/10"></div>
+          <div class="text-center">
+            <div class="text-2xl font-black text-purple-400">NZ</div>
+            <div class="text-xs text-gray-500 mt-0.5">Based Team</div>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start reveal reveal-delay-3">
+          <a href="#contact-form" id="cta-free-quote" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold px-8 py-4 rounded-full glow-btn text-base transition-all hover:scale-105">
+            <i class="fas fa-paper-plane text-sm"></i> Get a Free Quote
+          </a>
+          <a href="#process" id="cta-see-process" class="inline-flex items-center justify-center gap-2 glow-btn-outline font-bold px-8 py-4 rounded-full text-base transition-all hover:scale-105 text-green-400 border border-green-500/40">
+            <i class="fas fa-play-circle text-sm"></i> See Our Process
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Browser Mockup -->
+      <div class="flex-1 w-full max-w-xl mx-auto lg:mx-0 reveal reveal-delay-2" aria-hidden="true">
+        <div class="browser-mockup float-anim">
+          <div class="browser-bar">
+            <div class="browser-dot bg-red-500/70"></div>
+            <div class="browser-dot bg-yellow-500/70"></div>
+            <div class="browser-dot bg-green-500/70"></div>
+            <div class="browser-url">https://yoursite.com</div>
+            <div class="text-gray-600 text-xs"><i class="fas fa-lock"></i></div>
+          </div>
+          <div class="browser-content">
+            <!-- Simulated hero section -->
+            <div class="rounded-xl p-4 mb-4" style="background:linear-gradient(135deg,rgba(0,255,136,0.08),rgba(0,180,216,0.08));border:1px solid rgba(0,255,136,0.15)">
+              <div class="h-3 w-20 rounded mb-2" style="background:rgba(0,255,136,0.4)"></div>
+              <div class="h-5 w-40 rounded mb-2" style="background:rgba(255,255,255,0.12)"></div>
+              <div class="h-3 w-32 rounded mb-3" style="background:rgba(255,255,255,0.06)"></div>
+              <div class="flex gap-2">
+                <div class="h-8 w-20 rounded-full" style="background:rgba(0,255,136,0.5)"></div>
+                <div class="h-8 w-20 rounded-full" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15)"></div>
+              </div>
+            </div>
+            <!-- Code lines -->
+            <div class="space-y-1">
+              <div class="code-line"><span class="code-line-num">1</span><span class="code-keyword">const</span>&nbsp;<span class="code-func">Hero</span>&nbsp;<span class="text-gray-500">=</span>&nbsp;<span class="code-keyword">()</span>&nbsp;<span class="text-gray-500">=&gt;</span>&nbsp;<span class="code-keyword">{</span></div>
+              <div class="code-line"><span class="code-line-num">2</span>&nbsp;&nbsp;<span class="code-keyword">return</span>&nbsp;<span class="code-keyword">(</span></div>
+              <div class="code-line"><span class="code-line-num">3</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;section</span>&nbsp;<span class="code-attr">className</span><span class="text-gray-500">=</span><span class="code-string">"hero"</span><span class="code-tag">&gt;</span></div>
+              <div class="code-line"><span class="code-line-num">4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;h1&gt;</span><span class="code-string">Digital Growth</span><span class="code-tag">&lt;/h1&gt;</span></div>
+              <div class="code-line"><span class="code-line-num">5</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-tag">&lt;p</span>&nbsp;<span class="code-attr">className</span><span class="text-gray-500">=</span><span class="code-string">"seo-ready"</span><span class="code-tag">&gt;</span></div>
+              <div class="code-line"><span class="code-line-num">6</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-string">Optimised. Responsive.<span class="typing-cursor"></span></span></div>
+              <div class="code-line"><span class="code-line-num">7</span><span class="code-comment">// Core Web Vitals: LCP &lt;2.5s ✓</span></div>
+              <div class="code-line"><span class="code-line-num">8</span><span class="code-comment">// Mobile-First Design ✓</span></div>
+            </div>
+            <!-- Mini metrics bar -->
+            <div class="mt-4 grid grid-cols-3 gap-2">
+              <div class="rounded-lg p-2 text-center" style="background:rgba(0,255,136,0.07);border:1px solid rgba(0,255,136,0.15)">
+                <div class="text-xs font-bold text-green-400">98</div>
+                <div class="text-[9px] text-gray-500">Performance</div>
+              </div>
+              <div class="rounded-lg p-2 text-center" style="background:rgba(0,180,216,0.07);border:1px solid rgba(0,180,216,0.15)">
+                <div class="text-xs font-bold text-blue-400">97</div>
+                <div class="text-[9px] text-gray-500">SEO</div>
+              </div>
+              <div class="rounded-lg p-2 text-center" style="background:rgba(168,85,247,0.07);border:1px solid rgba(168,85,247,0.15)">
+                <div class="text-xs font-bold text-purple-400">100</div>
+                <div class="text-[9px] text-gray-500">Accessibility</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Floating accent badges -->
+        <div class="flex justify-end gap-3 mt-4 pr-2">
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(0,255,136,0.1);border:1px solid rgba(0,255,136,0.2);color:#00ff88">
+            <i class="fas fa-check-circle text-xs"></i> Core Web Vitals
+          </div>
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(0,180,216,0.1);border:1px solid rgba(0,180,216,0.2);color:#00b4d8">
+            <i class="fas fa-shield-alt text-xs"></i> SSL Secured
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ WHAT WE BUILD ═══════════════════════════════════ -->
+<section class="py-24 relative" aria-labelledby="what-we-build-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 section-badge mb-4">
+        <i class="fas fa-layer-group text-xs"></i>
+        <span>What We Build</span>
+      </div>
+      <h2 id="what-we-build-heading" class="text-3xl sm:text-4xl font-black text-white mb-4">
+        Every Type of Web Project,<br /><span class="gradient-text">Delivered with Precision</span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto text-base">From simple business cards to complex web applications — we have the expertise to bring your vision to life.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Business Websites -->
+      <div class="build-card reveal" aria-label="Business Websites">
+        <div class="build-icon" style="background:linear-gradient(135deg,rgba(0,255,136,0.15),rgba(0,180,216,0.15))">
+          <i class="fas fa-building text-green-400"></i>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-3">Business &amp; Brochure Websites</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">Professional online presence for businesses of all sizes. Showcase your services, build credibility, and generate leads.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag text-xs">Lead Generation</span>
+          <span class="tech-tag text-xs">SEO-Ready</span>
+          <span class="tech-tag text-xs">Contact Forms</span>
+        </div>
+      </div>
+
+      <!-- E-Commerce -->
+      <div class="build-card reveal reveal-delay-1" aria-label="E-Commerce Stores">
+        <div class="build-icon" style="background:linear-gradient(135deg,rgba(251,191,36,0.15),rgba(245,158,11,0.15))">
+          <i class="fas fa-shopping-cart text-yellow-400"></i>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-3">E-Commerce Stores</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">Custom-built online stores with WooCommerce, Shopify, or fully bespoke solutions — optimised for conversions.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag text-xs">WooCommerce</span>
+          <span class="tech-tag text-xs">Shopify</span>
+          <span class="tech-tag text-xs">Payment Gateway</span>
+        </div>
+      </div>
+
+      <!-- SaaS -->
+      <div class="build-card reveal reveal-delay-2" aria-label="SaaS Web Applications">
+        <div class="build-icon" style="background:linear-gradient(135deg,rgba(168,85,247,0.15),rgba(139,92,246,0.15))">
+          <i class="fas fa-rocket text-purple-400"></i>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-3">SaaS &amp; Web Applications</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">Complex, scalable web applications with user dashboards, authentication, APIs, and database integration.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag text-xs">React / Next.js</span>
+          <span class="tech-tag text-xs">REST APIs</span>
+          <span class="tech-tag text-xs">Auth Systems</span>
+        </div>
+      </div>
+
+      <!-- Landing Pages -->
+      <div class="build-card reveal" aria-label="Landing Pages and Funnels">
+        <div class="build-icon" style="background:linear-gradient(135deg,rgba(236,72,153,0.15),rgba(244,114,182,0.15))">
+          <i class="fas fa-filter text-pink-400"></i>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-3">Landing Pages &amp; Funnels</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">High-converting landing pages designed for campaigns, product launches, and lead capture — A/B test ready.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag text-xs">Conversion Rate</span>
+          <span class="tech-tag text-xs">A/B Testing</span>
+          <span class="tech-tag text-xs">Analytics</span>
+        </div>
+      </div>
+
+      <!-- CMS Websites -->
+      <div class="build-card reveal reveal-delay-1" aria-label="CMS Websites">
+        <div class="build-icon" style="background:linear-gradient(135deg,rgba(20,184,166,0.15),rgba(6,182,212,0.15))">
+          <i class="fas fa-pen-nib text-teal-400"></i>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-3">CMS Websites</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">Easily manage your own content with WordPress or headless CMS solutions — empowering your team without dev dependency.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag text-xs">WordPress</span>
+          <span class="tech-tag text-xs">Headless CMS</span>
+          <span class="tech-tag text-xs">Self-Manageable</span>
+        </div>
+      </div>
+
+      <!-- Portfolio Sites -->
+      <div class="build-card reveal reveal-delay-2" aria-label="Portfolio and Personal Brand Sites">
+        <div class="build-icon" style="background:linear-gradient(135deg,rgba(251,146,60,0.15),rgba(249,115,22,0.15))">
+          <i class="fas fa-star text-orange-400"></i>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-3">Portfolio &amp; Personal Brand Sites</h3>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">Stunning personal brand websites and portfolios for creatives, freelancers, and professionals who want to stand out.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-tag text-xs">Unique Design</span>
+          <span class="tech-tag text-xs">Animated UI</span>
+          <span class="tech-tag text-xs">Fast Loading</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+<!-- ═══════════════════════════════════ OUR PROCESS ═══════════════════════════════════ -->
+<section id="process" class="py-24 relative" aria-labelledby="process-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 section-badge mb-4">
+        <i class="fas fa-route text-xs"></i>
+        <span>Our Process</span>
+      </div>
+      <h2 id="process-heading" class="text-3xl sm:text-4xl font-black text-white mb-4">
+        How We Build<br /><span class="gradient-text">World-Class Websites</span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">A proven, transparent process that keeps you informed at every stage — from first conversation to launch day.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 relative">
+
+      <!-- Step 1 -->
+      <div class="process-step text-center reveal">
+        <div class="step-number">1</div>
+        <div class="glass rounded-2xl p-6">
+          <div class="text-2xl mb-3">🔍</div>
+          <h3 class="text-white font-bold text-base mb-2">Discovery &amp; Strategy</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">We learn your goals, understand your audience, and research competitors to build a smart strategy.</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step text-center reveal reveal-delay-1">
+        <div class="step-number">2</div>
+        <div class="glass rounded-2xl p-6">
+          <div class="text-2xl mb-3">🎨</div>
+          <h3 class="text-white font-bold text-base mb-2">UI/UX Design</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Wireframes, interactive prototypes, and polished visual designs crafted in Figma for your approval.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step text-center reveal reveal-delay-2">
+        <div class="step-number">3</div>
+        <div class="glass rounded-2xl p-6">
+          <div class="text-2xl mb-3">💻</div>
+          <h3 class="text-white font-bold text-base mb-2">Development</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Clean, performance-first code built with modern technologies — optimised for speed and scalability.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-step text-center reveal reveal-delay-3">
+        <div class="step-number">4</div>
+        <div class="glass rounded-2xl p-6">
+          <div class="text-2xl mb-3">🧪</div>
+          <h3 class="text-white font-bold text-base mb-2">Testing &amp; QA</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Cross-browser testing, mobile audits, performance benchmarks, and accessibility checks before launch.</p>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="process-step text-center reveal reveal-delay-4">
+        <div class="step-number">5</div>
+        <div class="glass rounded-2xl p-6">
+          <div class="text-2xl mb-3">🚀</div>
+          <h3 class="text-white font-bold text-base mb-2">Launch &amp; Support</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">Smooth deployment, SEO setup, Google Analytics, and ongoing support — we don't disappear after launch.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+<!-- ═══════════════════════════════════ TECH STACK ═══════════════════════════════════ -->
+<section class="py-24 relative" aria-labelledby="tech-stack-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 section-badge mb-4">
+        <i class="fas fa-microchip text-xs"></i>
+        <span>Tech Stack</span>
+      </div>
+      <h2 id="tech-stack-heading" class="text-3xl sm:text-4xl font-black text-white mb-4">
+        Built with <span class="gradient-text">Modern Technologies</span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">We use industry-leading tools and frameworks to deliver fast, secure, and scalable websites.</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4 reveal">
+      <div class="tech-pill" role="listitem">
+        <span class="text-blue-400">⚛</span> React
+      </div>
+      <div class="tech-pill" role="listitem">
+        <span class="text-white">▲</span> Next.js
+      </div>
+      <div class="tech-pill" role="listitem">
+        <span class="text-yellow-400">🐍</span> Python / Django
+      </div>
+      <div class="tech-pill" role="listitem">
+        <span class="text-blue-500">W</span> WordPress
+      </div>
+      <div class="tech-pill" role="listitem">
+        <span class="text-green-500">⬡</span> Node.js
+      </div>
+      <div class="tech-pill" role="listitem">
+        <span class="text-cyan-400">~</span> Tailwind CSS
+      </div>
+      <div class="tech-pill" role="listitem">
+        <span class="text-blue-400">🐘</span> PostgreSQL
+      </div>
+      <div class="tech-pill" role="listitem">
+        <span class="text-orange-400">☁</span> AWS / Vercel
+      </div>
+      <div class="tech-pill" role="listitem">
+        <span class="text-orange-500">📊</span> Google Analytics
+      </div>
+      <div class="tech-pill" role="listitem">
+        <span class="text-purple-400">🎨</span> Figma
+      </div>
+    </div>
+
+    <!-- Visual tech capability bar -->
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+      <div class="glass rounded-2xl p-6 text-center">
+        <div class="text-3xl font-black text-green-400 mb-1">2–10<span class="text-lg">wk</span></div>
+        <div class="text-gray-400 text-sm">Typical Project Timeline</div>
+      </div>
+      <div class="glass rounded-2xl p-6 text-center">
+        <div class="text-3xl font-black text-blue-400 mb-1">98<span class="text-lg">+</span></div>
+        <div class="text-gray-400 text-sm">Avg. PageSpeed Score</div>
+      </div>
+      <div class="glass rounded-2xl p-6 text-center">
+        <div class="text-3xl font-black text-purple-400 mb-1">100%</div>
+        <div class="text-gray-400 text-sm">Responsive on All Devices</div>
+      </div>
+      <div class="glass rounded-2xl p-6 text-center">
+        <div class="text-3xl font-black text-orange-400 mb-1">SSL</div>
+        <div class="text-gray-400 text-sm">Secure by Default</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+<!-- ═══════════════════════════════════ WHY BMT ═══════════════════════════════════ -->
+<section class="py-24 relative" aria-labelledby="why-bmt-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Heading + Visual -->
+      <div class="reveal">
+        <div class="inline-flex items-center gap-2 section-badge mb-6">
+          <i class="fas fa-trophy text-xs"></i>
+          <span>Why Choose BMT</span>
+        </div>
+        <h2 id="why-bmt-heading" class="text-3xl sm:text-4xl font-black text-white mb-6">
+          The BMT Difference in<br /><span class="gradient-text">Web Development</span>
+        </h2>
+        <p class="text-gray-400 mb-8 leading-relaxed">We're not just developers — we're strategic partners who care about your online success as much as you do. Here's what sets us apart:</p>
+
+        <!-- Visual card mockup -->
+        <div class="glass-strong rounded-2xl p-6 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 rounded-full opacity-20" style="background:radial-gradient(circle,#00ff88,transparent);transform:translate(30%,-30%)"></div>
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+              <i class="fas fa-chart-line text-white"></i>
+            </div>
+            <div>
+              <div class="text-white font-bold">Project Dashboard</div>
+              <div class="text-green-400 text-xs">Live progress tracking</div>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400 text-sm">Discovery &amp; Strategy</span>
+              <div class="flex items-center gap-2">
+                <div class="h-2 rounded-full bg-green-400/20 w-32 overflow-hidden">
+                  <div class="h-full rounded-full bg-green-400" style="width:100%"></div>
+                </div>
+                <span class="text-green-400 text-xs font-bold">Done</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400 text-sm">UI/UX Design</span>
+              <div class="flex items-center gap-2">
+                <div class="h-2 rounded-full bg-blue-400/20 w-32 overflow-hidden">
+                  <div class="h-full rounded-full bg-blue-400" style="width:100%"></div>
+                </div>
+                <span class="text-blue-400 text-xs font-bold">Done</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400 text-sm">Development</span>
+              <div class="flex items-center gap-2">
+                <div class="h-2 rounded-full bg-yellow-400/20 w-32 overflow-hidden">
+                  <div class="h-full rounded-full bg-yellow-400" style="width:72%"></div>
+                </div>
+                <span class="text-yellow-400 text-xs font-bold">72%</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400 text-sm">Testing &amp; QA</span>
+              <div class="flex items-center gap-2">
+                <div class="h-2 rounded-full bg-gray-700 w-32 overflow-hidden">
+                  <div class="h-full rounded-full bg-gray-600" style="width:0%"></div>
+                </div>
+                <span class="text-gray-500 text-xs font-bold">Next</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2 text-xs text-gray-500">
+            <i class="fas fa-clock text-green-400"></i>
+            <span>Estimated completion: <span class="text-green-400 font-semibold">On schedule</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Benefits list -->
+      <div class="space-y-4 reveal reveal-delay-1">
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-search text-green-400"></i></div>
+          <div>
+            <h3 class="text-white font-semibold mb-1">SEO-First Architecture</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">SEO is built in from day one — not bolted on afterwards. Structured data, meta tags, semantic HTML, and performance are core to every build.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-mobile-alt text-blue-400"></i></div>
+          <div>
+            <h3 class="text-white font-semibold mb-1">Mobile-First Responsive Design</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Every site is designed and tested on mobile first — ensuring a perfect experience for the majority of your visitors.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-tachometer-alt text-purple-400"></i></div>
+          <div>
+            <h3 class="text-white font-semibold mb-1">Performance Optimised</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Core Web Vitals focused development — fast load times, optimised images, and lazy loading for top Google rankings.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-comments text-yellow-400"></i></div>
+          <div>
+            <h3 class="text-white font-semibold mb-1">Transparent Communication</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Regular updates, clear timelines, and no surprises — you'll always know exactly where your project stands.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-headset text-teal-400"></i></div>
+          <div>
+            <h3 class="text-white font-semibold mb-1">Post-Launch Support Included</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">We don't disappear after go-live. Every project includes post-launch support and we offer flexible maintenance plans.</p>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-globe text-orange-400"></i></div>
+          <div>
+            <h3 class="text-white font-semibold mb-1">NZ-Based Team, Global Standards</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Based in New Zealand with international clients — we deliver to world-class standards with the reliability of a local team.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+<!-- ═══════════════════════════════════ PRICING ═══════════════════════════════════ -->
+<section class="py-24 relative" aria-labelledby="pricing-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 section-badge mb-4">
+        <i class="fas fa-tags text-xs"></i>
+        <span>Pricing Tiers</span>
+      </div>
+      <h2 id="pricing-heading" class="text-3xl sm:text-4xl font-black text-white mb-4">
+        Flexible Plans for<br /><span class="gradient-text">Every Stage of Growth</span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">All projects are scoped and priced individually. Contact us for a free, no-obligation quote.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 items-stretch">
+
+      <!-- Starter -->
+      <div class="pricing-card reveal">
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background:rgba(0,255,136,0.1)">🌱</div>
+            <h3 class="text-white font-black text-xl">Starter</h3>
+          </div>
+          <div class="text-green-400 font-bold text-lg mb-1">Contact for Pricing</div>
+          <p class="text-gray-500 text-sm">Perfect for small businesses &amp; startups</p>
+        </div>
+        <div class="space-y-1 mb-8">
+          <div class="pricing-feature"><i class="fas fa-check"></i> Single-page / brochure site</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Fully mobile responsive</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Basic on-page SEO</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Contact form integration</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Google Analytics setup</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> 2 revision rounds</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> SSL certificate</div>
+        </div>
+        <a href="#contact-form" class="block text-center py-3 rounded-full border border-green-500/40 text-green-400 font-semibold text-sm hover:bg-green-500/10 transition-all">Get a Quote</a>
+      </div>
+
+      <!-- Business (Featured) -->
+      <div class="pricing-card featured reveal reveal-delay-1">
+        <div class="pricing-badge">⭐ Most Popular</div>
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background:rgba(0,255,136,0.12)">🚀</div>
+            <h3 class="text-white font-black text-xl">Business</h3>
+          </div>
+          <div class="text-green-400 font-bold text-lg mb-1">Contact for Pricing</div>
+          <p class="text-gray-500 text-sm">Ideal for growing businesses &amp; brands</p>
+        </div>
+        <div class="space-y-1 mb-8">
+          <div class="pricing-feature"><i class="fas fa-check"></i> Multi-page website</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Advanced SEO strategy</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> CMS integration</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Analytics &amp; tracking setup</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> E-commerce ready</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Performance audit included</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> 5 revision rounds</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> 1 month post-launch support</div>
+        </div>
+        <a href="#contact-form" class="block text-center py-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold text-sm glow-btn transition-all hover:scale-105">Get a Quote</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="pricing-card reveal reveal-delay-2">
+        <div class="mb-6">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background:rgba(168,85,247,0.1)">🏢</div>
+            <h3 class="text-white font-black text-xl">Enterprise</h3>
+          </div>
+          <div class="text-purple-400 font-bold text-lg mb-1">Contact for Pricing</div>
+          <p class="text-gray-500 text-sm">For complex web applications &amp; organisations</p>
+        </div>
+        <div class="space-y-1 mb-8">
+          <div class="pricing-feature"><i class="fas fa-check"></i> Full custom web application</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> API integrations</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Database architecture</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Dedicated project manager</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Priority ongoing support</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Unlimited revisions</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Performance SLAs</div>
+          <div class="pricing-feature"><i class="fas fa-check"></i> Scalable infrastructure</div>
+        </div>
+        <a href="#contact-form" class="block text-center py-3 rounded-full border border-purple-500/40 text-purple-400 font-semibold text-sm hover:bg-purple-500/10 transition-all">Get a Quote</a>
+      </div>
+
+    </div>
+
+    <div class="mt-10 text-center reveal">
+      <p class="text-gray-500 text-sm"><i class="fas fa-info-circle text-green-400 mr-2"></i>All projects are individually scoped and priced. Contact us for a <strong class="text-green-400">free, no-obligation quote</strong> tailored to your specific needs.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+<!-- ═══════════════════════════════════ FAQ ═══════════════════════════════════ -->
+<section class="py-24 relative" aria-labelledby="faq-heading">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 section-badge mb-4">
+        <i class="fas fa-question-circle text-xs"></i>
+        <span>FAQ</span>
+      </div>
+      <h2 id="faq-heading" class="text-3xl sm:text-4xl font-black text-white mb-4">
+        Frequently Asked <span class="gradient-text">Questions</span>
+      </h2>
+      <p class="text-gray-400">Everything you need to know about our web development services.</p>
+    </div>
+
+    <div class="space-y-3 reveal">
+
+      <div class="faq-item" id="faq-1">
+        <div class="faq-question" onclick="toggleFAQ('faq-1')" role="button" aria-expanded="false" aria-controls="faq-answer-1" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFAQ('faq-1')">
+          <span>How long does a website take to build?</span>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer" id="faq-answer-1" role="region">
+          <div class="faq-answer-inner">Timelines vary by complexity. A brochure site typically takes 2–3 weeks; e-commerce or custom web apps may take 6–10 weeks. We'll give you a clear project timeline upfront during our discovery call.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-2">
+        <div class="faq-question" onclick="toggleFAQ('faq-2')" role="button" aria-expanded="false" aria-controls="faq-answer-2" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFAQ('faq-2')">
+          <span>Do you provide SEO with every website?</span>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer" id="faq-answer-2" role="region">
+          <div class="faq-answer-inner">Yes — SEO-optimised architecture, meta tags, structured data, and page speed are built into every project from day one. We don't treat SEO as an add-on; it's part of our core development process.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-3">
+        <div class="faq-question" onclick="toggleFAQ('faq-3')" role="button" aria-expanded="false" aria-controls="faq-answer-3" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFAQ('faq-3')">
+          <span>Will my website work on mobile?</span>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer" id="faq-answer-3" role="region">
+          <div class="faq-answer-inner">Absolutely. We build mobile-first — every site is fully responsive and tested across a wide range of devices and screen sizes before launch. Mobile users are always our primary consideration.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-4">
+        <div class="faq-question" onclick="toggleFAQ('faq-4')" role="button" aria-expanded="false" aria-controls="faq-answer-4" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFAQ('faq-4')">
+          <span>Can you redesign my existing website?</span>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer" id="faq-answer-4" role="region">
+          <div class="faq-answer-inner">Yes — we offer full redesigns and can migrate content from your current platform. Whether you're on WordPress, Squarespace, Wix, or a custom-built site, we can modernise it without losing your existing content or SEO rankings.</div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-5">
+        <div class="faq-question" onclick="toggleFAQ('faq-5')" role="button" aria-expanded="false" aria-controls="faq-answer-5" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFAQ('faq-5')">
+          <span>Do you offer ongoing maintenance?</span>
+          <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="faq-answer" id="faq-answer-5" role="region">
+          <div class="faq-answer-inner">Yes — we offer flexible monthly support and maintenance packages after launch. This includes plugin updates, security monitoring, content updates, performance checks, and priority bug fixes.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="section-divider max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+
+<!-- ═══════════════════════════════════ CONTACT / QUOTE FORM ═══════════════════════════════════ -->
+<section id="contact-form" class="py-24 relative" aria-labelledby="contact-form-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section header -->
+    <div class="text-center mb-16 reveal">
+      <div class="inline-flex items-center gap-2 section-badge mb-4">
+        <i class="fas fa-paper-plane text-xs"></i>
+        <span>Get a Free Quote</span>
+      </div>
+      <h2 id="contact-form-heading" class="text-3xl sm:text-4xl font-black text-white mb-4">
+        Ready to Build<br /><span class="gradient-text">Your Website?</span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">Tell us about your project and we'll get back to you within 24 hours with a tailored proposal.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-12 items-start">
+
+      <!-- Left: Benefits -->
+      <div class="lg:col-span-2 reveal">
+        <div class="glass rounded-2xl p-8 mb-6">
+          <h3 class="text-white font-bold text-lg mb-6">What You Get</h3>
+          <div class="contact-benefit">
+            <div class="contact-benefit-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="text-white font-semibold text-sm">Free Consultation Call</div>
+              <div class="text-gray-400 text-xs mt-0.5">30-min discovery session at no charge</div>
+            </div>
+          </div>
+          <div class="contact-benefit">
+            <div class="contact-benefit-icon" style="background:rgba(0,180,216,0.12);color:#00b4d8"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="text-white font-semibold text-sm">NZ-Based Team</div>
+              <div class="text-gray-400 text-xs mt-0.5">Local support, global standards</div>
+            </div>
+          </div>
+          <div class="contact-benefit">
+            <div class="contact-benefit-icon" style="background:rgba(168,85,247,0.12);color:#c084fc"><i class="fas fa-bolt"></i></div>
+            <div>
+              <div class="text-white font-semibold text-sm">Fast Turnaround</div>
+              <div class="text-gray-400 text-xs mt-0.5">Quote delivered within 24–48 hours</div>
+            </div>
+          </div>
+          <div class="contact-benefit">
+            <div class="contact-benefit-icon" style="background:rgba(251,191,36,0.12);color:#fbbf24"><i class="fas fa-headset"></i></div>
+            <div>
+              <div class="text-white font-semibold text-sm">Post-Launch Support</div>
+              <div class="text-gray-400 text-xs mt-0.5">We're here after the site goes live</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact details -->
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-white font-bold text-sm mb-4">Or reach us directly</h3>
+          <a href="mailto:Brainwavematrixtech@gmail.com" class="flex items-center gap-3 text-gray-400 hover:text-green-400 transition-colors text-sm mb-3">
+            <i class="fas fa-envelope text-green-400"></i>
+            Brainwavematrixtech@gmail.com
+          </a>
+          <a href="tel:+64210862 9929" class="flex items-center gap-3 text-gray-400 hover:text-green-400 transition-colors text-sm">
+            <i class="fas fa-phone text-blue-400"></i>
+            +64 21 086 29929
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="lg:col-span-3 reveal reveal-delay-1">
+        <div class="glass-strong rounded-2xl p-8">
+
+          <!-- Success state -->
+          <div id="form-success" class="flex-col items-center justify-center text-center py-10 gap-4">
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-lg" style="animation:pulse-ring 2s ease infinite">
+              <i class="fas fa-check text-3xl text-white"></i>
+            </div>
+            <h3 class="text-white text-2xl font-black mb-2">Message Sent!</h3>
+            <p class="text-gray-400">Thank you for reaching out. We'll come back to you within 24 hours with a tailored proposal.</p>
+          </div>
+
+          <!-- Form -->
+          <form id="webdev-quote-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="f1d67150-9872-4241-91ad-c6682e923535" />
+            <input type="hidden" name="subject" value="Web Development Enquiry — BMT" />
+            <input type="hidden" name="from_name" value="BMT Website" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" aria-hidden="true" />
+
+            <div class="grid sm:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label for="wd-name" class="block text-gray-300 text-sm font-semibold mb-2">Full Name <span class="text-green-400">*</span></label>
+                <input type="text" id="wd-name" name="name" required placeholder="Your full name" class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none" autocomplete="name" />
+              </div>
+              <div>
+                <label for="wd-email" class="block text-gray-300 text-sm font-semibold mb-2">Email Address <span class="text-green-400">*</span></label>
+                <input type="email" id="wd-email" name="email" required placeholder="you@example.com" class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none" autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label for="wd-phone" class="block text-gray-300 text-sm font-semibold mb-2">Phone <span class="text-gray-500 font-normal">(optional)</span></label>
+                <input type="tel" id="wd-phone" name="phone" placeholder="+64 21 XXX XXXX" class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none" autocomplete="tel" />
+              </div>
+              <div>
+                <label for="wd-url" class="block text-gray-300 text-sm font-semibold mb-2">Current Website URL <span class="text-gray-500 font-normal">(if redesign)</span></label>
+                <input type="url" id="wd-url" name="website_url" placeholder="https://yoursite.com" class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none" />
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <label for="wd-budget" class="block text-gray-300 text-sm font-semibold mb-2">Budget Range <span class="text-green-400">*</span></label>
+              <select id="wd-budget" name="budget" required class="form-input w-full px-4 py-3 rounded-xl text-sm focus:outline-none" style="color:#94a3b8;-webkit-appearance:none">
+                <option value="" disabled selected style="color:#475569">Select your budget range</option>
+                <option value="Under $1,000" style="background:#0f172a">Under $1,000</option>
+                <option value="$1,000 – $3,000" style="background:#0f172a">$1,000 – $3,000</option>
+                <option value="$3,000 – $10,000" style="background:#0f172a">$3,000 – $10,000</option>
+                <option value="$10,000+" style="background:#0f172a">$10,000+</option>
+              </select>
+            </div>
+
+            <div class="mb-6">
+              <label for="wd-message" class="block text-gray-300 text-sm font-semibold mb-2">Project Description <span class="text-green-400">*</span></label>
+              <textarea id="wd-message" name="message" required rows="5" placeholder="Tell us about your project — what you need, your target audience, key features, and any inspiration sites you love..." class="form-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 text-sm focus:outline-none resize-none"></textarea>
+            </div>
+
+            <button type="submit" id="wd-submit-btn" class="w-full inline-flex items-center justify-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-4 rounded-xl glow-btn text-base transition-all hover:scale-[1.02] hover:shadow-2xl">
+              <i class="fas fa-paper-plane"></i>
+              <span id="wd-btn-text">Send My Quote Request</span>
+            </button>
+
+            <p class="text-gray-600 text-xs text-center mt-4"><i class="fas fa-lock mr-1"></i>Your information is secure and will never be shared.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+<footer class="footer-bg pt-16 pb-8" role="contentinfo">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div class="sm:col-span-2 lg:col-span-1">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="bmt_logo.ico" alt="BMT Logo" class="w-12 h-12 object-contain rounded-xl shadow-lg" />
+          <div>
+            <span class="text-white font-bold text-base leading-none">Brainwave Matrix Tech</span>
+            <span class="block text-[10px] text-green-400 font-semibold tracking-wide">Brainpower Meets Technology</span>
+          </div>
+        </div>
+        <p class="text-gray-500 text-sm leading-relaxed mb-4">New Zealand-based technology company delivering premium web, mobile, and EdTech solutions.</p>
+        <div class="flex items-center gap-2 text-xs text-gray-600"><i class="fas fa-map-marker-alt text-green-500"></i> New Zealand &bull; Global Reach</div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm">Services</h4>
+        <ul class="space-y-2.5">
+          <li><a href="web-development.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Web Design &amp; Development</a></li>
+          <li><a href="mobile-apps.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Mobile App Development</a></li>
+          <li><a href="coding-academy.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">Coding for Kids</a></li>
+          <li><a href="web-development.html" class="text-gray-500 hover:text-green-400 text-sm transition-colors">SEO Optimisation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm">Our Products</h4>
+        <ul class="space-y-2.5">
+          <li><a href="https://play.google.com/store/apps/details?id=com.bmt.arithmetic" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#10133; Arithmetic</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.bmt.numberninjas" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129399; Number Ninjas</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.bmt.arithmeticpuzzle" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129513; Arithmetic Puzzle</a></li>
+          <li><a href="https://sthirabrainacademy.com/" target="_blank" rel="noopener" class="text-gray-500 hover:text-green-400 text-sm transition-colors">&#129504; Sthira Brain Academy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4 text-sm">Contact</h4>
+        <ul class="space-y-2.5">
+          <li><a href="mailto:Brainwavematrixtech@gmail.com" class="text-gray-500 hover:text-green-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-envelope text-xs"></i> Brainwavematrixtech@gmail.com</a></li>
+          <li><a href="tel:+6421086 29929" class="text-gray-500 hover:text-green-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-phone text-xs"></i> +64 21 086 29929</a></li>
+          <li class="text-gray-500 text-sm flex items-center gap-2"><i class="fas fa-map-marker-alt text-xs"></i> New Zealand</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-divider mb-8"></div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-600">
+      <p>&copy; <span id="year"></span> Brainwave Matrix Tech. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hover:text-green-400 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-green-400 transition-colors">Terms of Service</a>
+      </div>
+      <p class="flex items-center gap-1.5"><i class="fas fa-heart text-green-500 text-xs"></i> Building EdTech for kids in New Zealand and India</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg glow-btn flex items-center justify-center opacity-0 translate-y-4" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Toast notification -->
+<div id="toast" role="alert" aria-live="polite"></div>
+
+<!-- ═══════════════════════════════════ SCRIPTS ═══════════════════════════════════ -->
+<script>
+  // FAQ Toggle
+  function toggleFAQ(id) {
+    const item = document.getElementById(id);
+    const answer = item.querySelector('.faq-answer');
+    const btn = item.querySelector('.faq-question');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item.open').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.faq-answer').style.maxHeight = '0';
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Web3Forms submission
+  document.getElementById('webdev-quote-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('wd-submit-btn');
+    const btnText = document.getElementById('wd-btn-text');
+    btn.disabled = true;
+    btnText.textContent = 'Sending...';
+    btn.querySelector('i').className = 'fas fa-spinner fa-spin';
+
+    try {
+      const formData = new FormData(this);
+      const res = await fetch('https://api.web3forms.com/submit', { method:'POST', body: formData });
+      const data = await res.json();
+      if (data.success) {
+        this.style.display = 'none';
+        document.getElementById('form-success').classList.add('show');
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      btnText.textContent = 'Send My Quote Request';
+      btn.querySelector('i').className = 'fas fa-paper-plane';
+      btn.disabled = false;
+      showToast('Something went wrong. Please try again or email us directly.', 'error');
+    }
+  });
+
+  // Toast
+  function showToast(msg, type='success') {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.className = 'show ' + (type === 'error' ? 'error' : '');
+    setTimeout(() => { toast.className = toast.className.replace('show',''); }, 4000);
+  }
+
+  // Particles
+  (function(){
+    const c = document.getElementById('particles-hero');
+    if(!c) return;
+    for(let i=0;i<18;i++){
+      const p = document.createElement('div');
+      const size = Math.random()*4+2;
+      p.className='particle';
+      p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;background:${Math.random()>0.5?'#00ff88':'#00b4d8'};animation-duration:${Math.random()*15+10}s;animation-delay:${Math.random()*8}s;`;
+      c.appendChild(p);
+    }
+  })();
+</script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
